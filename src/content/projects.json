@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Tesla App",
+    "image": "../images/tesla-app.png",
+    "text": "React based app that uses Geolocation within a Tesla car browser to provide real-time weather, traffic, news, and local Yelp points of interested. Use this as your default homepage on your vehicle to get local information before leaving for your destination.",
+    "demo_link": "https://teslaweather.netlify.app/",
+    "github_link": "https://github.com/jxman/tesla-app"
+  },
+  {
+    "id": 2,
+    "name": "Personal Portfolio Site",
+    "image": "../images/personal-site.png",
+    "text": "This current site which is my personal portfolio site built usingthe Gatsby framework",
+    "demo_link": "https://teslaweather.netlify.app/",
+    "github_link": "https://github.com/jxman/tesla-app"
+  }
+]
