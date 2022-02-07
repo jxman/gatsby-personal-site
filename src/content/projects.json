@@ -12,7 +12,7 @@
     "name": "Personal Portfolio Site",
     "image": "../images/personal-site.png",
     "text": "This current site which is my personal portfolio site built usingthe Gatsby framework",
-    "demo_link": "https://teslaweather.netlify.app/",
-    "github_link": "https://github.com/jxman/tesla-app"
+    "demo_link": "https://synepho.com/",
+    "github_link": "https://github.com/jxman/gatsby-personal-site"
   }
 ]
