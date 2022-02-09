@@ -5,7 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `My Personal Website`,
+    siteUrl: `https://www.synepho.com`,
+    description: `Welcome to where my site where I talk a little about myself`,
+  },
   plugins: [
     "gatsby-plugin-postcss",
     {
@@ -32,6 +36,7 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
