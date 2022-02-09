@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 const IndexPage = () => {
@@ -7,9 +8,14 @@ const IndexPage = () => {
       <div className="hero ">
         <div className="text-center hero-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">John Xanthopoulos</h1>
-            <p className="mb-5 text-2xl">IT Executive by day ...</p>
-            <p className="mb-5 text-2xl">... Developer on the weekend</p>
+            <h1 className="mb-4 text-5xl font-bold">John Xanthopoulos</h1>
+            <p className="mb-1 text-2xl">IT Executive by day ...</p>
+            <p className="mb-4 text-2xl">... Developer on the weekend</p>
+            <StaticImage
+              class="max-w-sm rounded-lg shadow-2xl"
+              src="../images/me3.jpeg"
+              alt="bio picture"
+            />
           </div>
         </div>
       </div>
