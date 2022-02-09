@@ -7,7 +7,10 @@ function Navbar({ title }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const linkStyle = `
-  btn btn-ghost btn-sm rounded-btn
+  btn btn-ghost btn-sm rounded-btn 
+  `
+  const mobileStyle = `
+  btn btn-ghost btn-xs rounded-btn 
   `
 
   return (
@@ -123,38 +126,38 @@ function Navbar({ title }) {
         >
           {ref => (
             <div className="md:hidden" id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
                 <Link
                   to="/"
-                  className={linkStyle}
+                  className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Home
                 </Link>
                 <Link
                   to="/aboutme"
-                  className={linkStyle}
+                  className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   About
                 </Link>
                 <Link
                   to="/projects"
-                  className={linkStyle}
+                  className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Projects
                 </Link>
                 <Link
                   to="/resume"
-                  className={linkStyle}
+                  className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Resume
                 </Link>
                 <Link
                   to="/contact"
-                  className={linkStyle}
+                  className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Contact
