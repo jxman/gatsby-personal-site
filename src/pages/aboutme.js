@@ -9,7 +9,7 @@ function aboutme({ data }) {
   return (
     <Layout>
       <div className="grid grid-cols-4 ">
-        <div>
+        <div className="col-span-1">
           <StaticImage
             src="../images/me.jpeg"
             alt="bio picture"
@@ -17,7 +17,7 @@ function aboutme({ data }) {
           />
         </div>
 
-        <div className="col-span-2">
+        <div className="col-span-3">
           <article
             className=" flex-auto prose max-w-screen-md mx-auto"
             dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
