@@ -3,16 +3,24 @@
     "id": 1,
     "name": "Tesla App",
     "image": "../images/tesla-app.png",
-    "text": "React based app that uses Geolocation within a Tesla car browser to provide real-time weather, traffic, news, and local Yelp points of interested. Use this as your default homepage on your vehicle to get local information before leaving for your destination.",
+    "text": "React based app that uses the Geolocation api within a Tesla car browser to provide real-time weather, traffic, news, and local Yelp points of interest.  My initial use-case was to create a default homepage in your vehicle to get local information before leaving for your next destination.  Unfortunately, in the recent V11 update Tesla disabled the Geolcation api in the browser and it currently doesn’t work as expected.  I am currently looking into workarounds or a possible opportunity of a Tesla App store where I can furhte expand my concept.",
     "demo_link": "https://teslaweather.netlify.app/",
     "github_link": "https://github.com/jxman/tesla-app"
   },
   {
     "id": 2,
-    "name": "Personal Portfolio Site",
+    "name": "Gasty Personal Branding Site",
     "image": "../images/personal-site.png",
-    "text": "This current site which is my personal portfolio site built usingthe Gatsby framework",
+    "text": "This site which I created using Gatsby which is a React-based framework that allows you to be build a web experience focused on speed, scale and security.  Additionally, the site uses styling based on the tailwindcss framework as well as components from daisyUI.  My overall goal for the site was to create a simple and clean hosted site where I can showcase my personal brand and gain some hands-on skills with the latest technologies.",
     "demo_link": "https://synepho.com/",
     "github_link": "https://github.com/jxman/gatsby-personal-site"
+  },
+  {
+    "id": 3,
+    "name": "AWS Multi-region Hosted Site",
+    "image": "../images/aws-site.png",
+    "text": "Instead of going with a hosting provider like Netlify or Vercel, I wanted to create my own Production-Grade and fully redundant site within Amazon Web Services.  Click below to view more details on the design which includes multi-region hosting, CDN caching and automated TLS key renewals.  All the AWS resources for this project have been built and configured using Terraform code and fully automated.  (See my Github repo below for more details.)",
+    "demo_link": "../awssite",
+    "github_link": "https://github.com/jxman/synepho-s3cf-site"
   }
 ]

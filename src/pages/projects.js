@@ -31,10 +31,17 @@ function projects({ data }) {
                 <a
                   href={project.demo_link}
                   className="btn btn-outline btn-primary"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
                 >
                   Live Demo
                 </a>
-                <a href={project.github_link} className="btn btn-outline ">
+                <a
+                  href={project.github_link}
+                  className="btn btn-outline"
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                >
                   Github Repo
                 </a>
               </div>

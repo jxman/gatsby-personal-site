@@ -59,8 +59,7 @@ function contact() {
                 <div class="modal-box">
                   <p>
                     Thank you for your reaching out, however I am still working
-                    on this Component. In the meantime feel free to connecting
-                    with on{" "}
+                    on this feature. In the meantime let's connect on{" "}
                     <a href="https://www.linkedin.com/in/johnx/">
                       LinkedIn. <FaLinkedin className="inline text-2xl" />
                     </a>
