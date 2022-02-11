@@ -1,19 +1,23 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 function resume({ data }) {
   const { markdownRemark } = data
 
   return (
-    <Layout>
-      <div>
-        <article
-          className="prose max-w-screen-md mx-auto"
-          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-        />
-      </div>
-    </Layout>
+    <>
+      <Seo title="Resume" />
+      <Layout>
+        <div>
+          <article
+            className="prose max-w-screen-md mx-auto"
+            dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+          />
+        </div>
+      </Layout>
+    </>
   )
 }
 

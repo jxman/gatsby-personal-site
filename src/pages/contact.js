@@ -1,11 +1,14 @@
 import React from "react"
 import { FaLinkedin } from "react-icons/fa"
 
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+import Seo from "../components/Seo"
 
 function contact() {
   return (
     <div>
+      <Seo title="Contact" />
+
       <Layout>
         <h1 className="mb-5 text-5xl font-bold ">Contact Me</h1>
         <p className=" mb-5">

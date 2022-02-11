@@ -6,9 +6,12 @@
 
 module.exports = {
   siteMetadata: {
-    title: `My Personal Website`,
-    siteUrl: `https://www.synepho.com`,
-    description: `Welcome to where my site where I talk a little about myself`,
+    title: "My Personal Websit",
+    titleTemplate: "%s ·  My Personal Website",
+    description: "Welcome to where my site where I talk a little about myself.",
+    url: "https://www.synepho.com", // No trailing slash allowed!
+    image: "/mainImg.pngg", // Path to the image placed in the 'static' folder, in the project's root directory.
+    twitterUsername: "@jxmam",
   },
   plugins: [
     "gatsby-plugin-postcss",
