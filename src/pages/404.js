@@ -4,7 +4,8 @@ import Layout from "../components/Layout"
 function Error() {
   return (
     <Layout>
-      <div>Error Page</div>
+      <h1>Page Not Found</h1>
+      <p>Oops, we couldn't find this page!</p>
     </Layout>
   )
 }

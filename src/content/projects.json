@@ -20,7 +20,7 @@
     "name": "AWS Multi-region Hosted Site",
     "image": "../images/aws-site.png",
     "text": "Instead of going with a hosting provider like Netlify or Vercel, I wanted to create my own Production-Grade and fully redundant site within Amazon Web Services.  Click below to view more details on the design which includes multi-region hosting, CDN caching and automated TLS key renewals.  All the AWS resources for this project have been built and configured using Terraform code and fully automated.  (See my Github repo below for more details.)",
-    "demo_link": "../awssite",
+    "demo_link": "../awssite/",
     "github_link": "https://github.com/jxman/synepho-s3cf-site"
   },
   {
@@ -28,7 +28,15 @@
     "name": "AWS RSS Status Check Site",
     "image": "../images/awsrss.png",
     "text": "A Node.js app running on to AWS Lambda with a DynamoDB backend and using the Serverless Framework (https://www.serverless.com/).  This app is designed to scan a list 3rd Party vendor RSS Status pages and alert on any notifications for outages and/or maintenance updates.  Once a vendor reports an issue an alert is sent to a pre-defined webhook and the state of the alert is managed within a DynamoDB table.  Currently I am working on a React web based front-end to both admin the listing of sites and view the status of alerts.",
-    "demo_link": "../awsrss",
+    "demo_link": "../awsrss/",
     "github_link": "https://github.com/jxman/awsrsschk"
+  },
+  {
+    "id": 4,
+    "name": "My Lawn",
+    "image": "../images/lawn1.jpeg",
+    "text": "A custom blend of Kentucky Bluegrass and Perennial Rye, working on my lawn is one of my favorite projects.  Nothing makes me prouder than seeing those vibrant lawn strips while I sit outside with family and friends to enjoy a nice BBQ.",
+    "demo_link": "../lawn/",
+    "github_link": "https://github.com/jxman/"
   }
 ]

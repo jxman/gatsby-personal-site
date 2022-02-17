@@ -1,9 +1,15 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import Seo from "../components/Seo"
 
 function awssite() {
   return (
-    <div>
+    <>
+      <Seo title="AWS Hosting Site" />
+
+      <a href="/projects/" className="btn btn-outline">
+        Back to Projects
+      </a>
       <div class="card text-center shadow-2xl">
         <figure class="px-10 pt-10">
           <h2 class="card-title">AWS Multi-region Hosted Site</h2>
@@ -44,7 +50,7 @@ function awssite() {
           <div class="justify-center card-actions"></div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

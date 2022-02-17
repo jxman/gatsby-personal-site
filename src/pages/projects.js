@@ -34,8 +34,6 @@ function projects({ data }) {
                   <a
                     href={project.demo_link}
                     className="btn btn-outline btn-primary"
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
                   >
                     Live Demo
                   </a>

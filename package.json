@@ -16,7 +16,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "axios": "^0.25.0",
-    "daisyui": "^1.24.3",
+    "daisyui": "^1.25.4",
     "gatsby": "^4.4.0",
     "gatsby-plugin-google-gtag": "^4.7.0",
     "gatsby-plugin-image": "^2.6.0",

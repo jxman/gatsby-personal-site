@@ -37,28 +37,28 @@ function Navbar({ title }) {
                     Home
                   </Link>
                   <Link
-                    to="/aboutme"
+                    to="/aboutme/"
                     className={linkStyle}
                     activeStyle={{ textDecoration: "underline" }}
                   >
                     About
                   </Link>
                   <Link
-                    to="/projects"
+                    to="/projects/"
                     className={linkStyle}
                     activeStyle={{ textDecoration: "underline" }}
                   >
                     Projects
                   </Link>
                   <Link
-                    to="/resume"
+                    to="/resume/"
                     className={linkStyle}
                     activeStyle={{ textDecoration: "underline" }}
                   >
                     Resume
                   </Link>
                   <Link
-                    to="/contact"
+                    to="/contact/"
                     className={linkStyle}
                     activeStyle={{ textDecoration: "underline" }}
                   >
@@ -135,28 +135,28 @@ function Navbar({ title }) {
                   Home
                 </Link>
                 <Link
-                  to="/aboutme"
+                  to="/aboutme/"
                   className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   About
                 </Link>
                 <Link
-                  to="/projects"
+                  to="/projects/"
                   className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Projects
                 </Link>
                 <Link
-                  to="/resume"
+                  to="/resume/"
                   className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Resume
                 </Link>
                 <Link
-                  to="/contact"
+                  to="/contact/"
                   className={mobileStyle}
                   activeStyle={{ textDecoration: "underline" }}
                 >
