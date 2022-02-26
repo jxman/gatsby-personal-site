@@ -4,7 +4,7 @@
 
 Accountable Technology Leader with more than 20 years hands on experience designing, executing and delivering effective cloud centric systems and solutions with a focus on innovation and best practices. Strong leader with the vision and proven track record for building and retaining highly performing technology teams. Results oriented strategic thinker with a passion for process improvement and leading change within an organization.
 
-<em>**Skill Areas:** w Digital Transformation w DevOps w Cloud Architecture & Design w Technical Architecture w Agile w Scaled Agile Framework (SAFe) w Cloud Governance & Security w Team Organization & Development w Cloud & Infrastructure Management w Risk Management w Vendor Management w Cloud Native Design w CI/CD</em>
+_**Skill Areas:** w Digital Transformation w DevOps w Cloud Architecture & Design w Technical Architecture w Agile w Scaled Agile Framework (SAFe) w Cloud Governance & Security w Team Organization & Development w Cloud & Infrastructure Management w Risk Management w Vendor Management w Cloud Native Design w CI/CD_
 
 ## **ACHIVEMENETS & HIGHLIGHTS**
 
@@ -18,6 +18,9 @@ Accountable Technology Leader with more than 20 years hands on experience design
 **Vice President, Information Technology** Apr 2018 – Present
 
 **Notified** | Boston, MA
+featuredImage: notified.jpeg
+
+<!-- ![Notified](../images/notified.jpeg) -->
 
 Oversee all aspects of DevOps, Cloud Engineering, Infrastructure and Operations reporting directly to the CTO.
 
@@ -29,7 +32,7 @@ Oversee all aspects of DevOps, Cloud Engineering, Infrastructure and Operations 
 
 **Associate Vice President, Head of Web Operations** Jun 2013 – Apr 2018
 
-**Nasdaq** |Boston, MA
+**Nasdaq** | Boston, MA
 
 Responsible for leading the Global Web Platforms Operations team supporting all the Web platforms across Nasdaq, directly reported to the SVP Global Head of Operations.
 

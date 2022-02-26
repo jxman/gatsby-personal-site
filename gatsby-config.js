@@ -8,10 +8,12 @@ module.exports = {
   siteMetadata: {
     title: "My Personal Websit",
     titleTemplate: "%s ·  My Personal Website",
-    description: "Welcome to where my site where I talk a little about myself.",
+    description: "Welcome to my site where I talk a little about myself.",
     url: "https://www.synepho.com", // No trailing slash allowed!
-    image: "/mainImg.pngg", // Path to the image placed in the 'static' folder, in the project's root directory.
+    siteUrl: "https://www.synepho.com", // No trailing slash allowed!
+    image: "/mainImg.png", // Path to the image placed in the 'static' folder, in the project's root directory.
     twitterUsername: "@jxmam",
+    siteUrl: "https://www.example.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -47,6 +49,23 @@ module.exports = {
         trackingIds: [
           "G-2HLT4VSZHW", // Google Analytics / GA
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "www.synepho.com",
+        protocol: "https",
+        hostname: "www.synepho.com",
+      },
+    },
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://www.synepho.com",
+        sitemap: "https://www.synepho.com/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
       },
     },
   ],
