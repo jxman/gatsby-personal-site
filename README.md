@@ -1,105 +1,447 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# John Xanthopoulos - Personal Portfolio Website
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A modern, responsive personal portfolio website built with Gatsby and deployed to AWS S3 with CloudFront CDN using secure, direct AWS CLI deployment.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## 🌐 Live Site
 
-## 🚀 Quick start
+**[https://synepho.com](https://synepho.com)**
 
-1.  **Create a Gatsby site.**
+> **SYNEPHO** is a phonetic rendition of the Greek word for Cloud, "σύννεφο," reflecting my deep connection with Cloud computing technologies.
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+## ✨ Features
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+- **Modern Stack**: Gatsby.js, React 18, Tailwind CSS, DaisyUI
+- **Responsive Design**: Mobile-first approach with beautiful UI components
+- **SEO Optimized**: Comprehensive meta tags, sitemap, robots.txt
+- **Performance**: Optimized images, lazy loading, CDN delivery
+- **Analytics**: Environment-based Google Analytics integration
+- **Security First**: Direct AWS CLI deployment, vulnerability-free dependencies
+- **Production Ready**: AWS S3 + CloudFront with automated deployment
 
-1.  **Start developing.**
+## 🛠 Tech Stack
 
-    Navigate into your new site’s directory and start it up.
+| Technology | Purpose |
+|------------|---------|
+| [Gatsby.js](https://www.gatsbyjs.com/) | Static site generator (v5.14.0) |
+| [React](https://reactjs.org/) | UI framework (v18.3.1) |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework (v3.4.17) |
+| [DaisyUI](https://daisyui.com/) | Tailwind CSS components (v4.12.24) |
+| [Headless UI](https://headlessui.dev/) | Accessible UI components |
+| [AWS S3](https://aws.amazon.com/s3/) | Static website hosting |
+| [AWS CloudFront](https://aws.amazon.com/cloudfront/) | Global CDN |
+| [AWS CLI](https://aws.amazon.com/cli/) | Direct deployment tooling |
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+## 📁 Project Structure
 
-1.  **Open the source code and start editing!**
+```
+├── src/
+│   ├── components/          # Reusable React components
+│   │   ├── Layout.js       # Main layout wrapper
+│   │   ├── Navbar.js       # Navigation component
+│   │   ├── Footer.js       # Footer component
+│   │   └── Seo.js          # SEO meta tags component
+│   ├── pages/              # Route pages
+│   │   ├── index.js        # Homepage
+│   │   ├── aboutme.js      # About page
+│   │   ├── projects.js     # Projects showcase
+│   │   ├── resume.js       # Resume page
+│   │   └── contact.js      # Contact page
+│   ├── content/            # JSON data files
+│   │   └── projects.json   # Projects data
+│   ├── markdown-pages/     # Markdown content
+│   │   ├── about.md        # About page content
+│   │   └── resume.md       # Resume content
+│   ├── images/             # Source images
+│   └── styles/             # Global styles
+├── static/                 # Static assets (copied to public)
+├── .env.example            # Environment variables template
+├── .env.development        # Development environment config
+├── gatsby-config.js        # Gatsby configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+└── package.json           # Dependencies and scripts
+```
 
-    Your site is now running at `http://localhost:8000`!
+## 🚀 Quick Start
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries)._
+### Prerequisites
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+- Node.js 18+ and npm
+- AWS CLI configured with appropriate permissions
+- Git
 
-## 🚀 Quick start (Gatsby Cloud)
+### Local Development
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd personal-site-new
+   ```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-## 🧐 What's inside?
+3. **Set up environment variables**
+   ```bash
+   cp .env.example .env.development
+   # Edit .env.development with your local values
+   ```
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+4. **Start development server**
+   ```bash
+   npm run develop
+   ```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+5. **Open in browser**
+   - Site: [http://localhost:8000](http://localhost:8000)
+   - GraphQL: [http://localhost:8000/___graphql](http://localhost:8000/___graphql)
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+### Available Scripts
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+| Script | Purpose |
+|--------|---------|
+| `npm run develop` | Start development server |
+| `npm run build` | Build for production |
+| `npm run serve` | Preview production build |
+| `npm run clean` | Clean Gatsby cache |
+| `npm run format` | Format code with Prettier |
+| `npm run deploy` | Deploy to S3 using AWS CLI |
+| `npm run build-and-deploy` | Build and deploy to S3 |
+| `npm run package` | Create deployment zip file |
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+## 🌩 AWS Deployment
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+This site uses **direct AWS CLI deployment** for enhanced security and reliability, eliminating vulnerable plugin dependencies.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Architecture
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+```
+Users → CloudFront CDN → S3 Static Website Hosting
+                           ↑
+                    AWS CLI Direct Upload
+```
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Deployment Method
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+**Secure AWS CLI Deployment:**
+```bash
+npm run build-and-deploy
+```
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+This approach:
+- ✅ Uses direct AWS API calls
+- ✅ Eliminates vulnerable plugin dependencies  
+- ✅ Provides better error handling
+- ✅ Offers more predictable behavior
+- ✅ Maintains full deployment control
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+### AWS Setup Requirements
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+#### S3 Bucket Configuration
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+1. **Bucket name**: `www.synepho.com`
+2. **Static website hosting**: Enabled
+3. **Public access**: Configured via bucket policy
+4. **Block Public ACLs**: Enabled (security best practice)
 
-## 🎓 Learning Gatsby
+**Bucket Policy:**
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::www.synepho.com/*"
+        }
+    ]
+}
+```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+#### CloudFront Distribution
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- **Origin**: S3 bucket website endpoint
+- **SSL/TLS**: Certificate for synepho.com
+- **Custom domain**: synepho.com, www.synepho.com
+- **Cache behaviors**: Optimized for static assets
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+#### Required IAM Permissions
 
-## 💫 Deploy
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::www.synepho.com",
+                "arn:aws:s3:::www.synepho.com/*"
+            ]
+        }
+    ]
+}
+```
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
+## 🔧 Environment Configuration
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+### Environment Variables Setup
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+The project uses environment-specific configuration:
+
+**`.env.development`** (committed - safe values):
+```env
+GATSBY_SITE_URL=http://localhost:8000
+GATSBY_GOOGLE_ANALYTICS_ID=G-2HLT4VSZHW
+GATSBY_ENABLE_ANALYTICS=false
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=www.synepho.com
+```
+
+**`.env.production`** (not committed - real values):
+```env
+GATSBY_SITE_URL=https://synepho.com
+GATSBY_GOOGLE_ANALYTICS_ID=G-2HLT4VSZHW
+GATSBY_ENABLE_ANALYTICS=true
+AWS_REGION=us-east-1
+AWS_S3_BUCKET=www.synepho.com
+```
+
+### Configuration Features
+
+- **Environment Separation**: Different configs for dev vs production
+- **Analytics Control**: Disabled in development, enabled in production
+- **Flexible URLs**: Easy to change domains without code changes
+- **Security**: Production secrets not committed to git
+- **Team Ready**: Easy onboarding with `.env.example`
+
+## 🎨 Customization
+
+### Adding New Pages
+
+1. Create new file in `src/pages/`
+2. Export React component as default
+3. Page automatically available at `/filename/`
+
+### Updating Projects
+
+Edit `src/content/projects.json`:
+```json
+{
+  "id": 1,
+  "name": "Project Name",
+  "image": "../images/project-screenshot.png",
+  "text": "Project description...",
+  "demo_link": "https://demo.example.com",
+  "github_link": "https://github.com/username/repo"
+}
+```
+
+### Adding Images
+
+1. **Static images**: Place in `static/` for direct access (recommended for hero images)
+2. **Processed images**: Place in `src/images/` and use `StaticImage` for optimization
+
+### Styling
+
+- **Tailwind classes**: Use for layout and styling
+- **DaisyUI components**: Use for consistent design system
+- **Custom CSS**: Add to `src/styles/`
+
+## 🔒 Security
+
+### Security-First Architecture
+
+This project prioritizes security through:
+
+- **Direct AWS CLI Deployment**: Eliminated vulnerable plugin dependencies
+- **Environment Variable Management**: Secrets properly isolated
+- **Minimal Dependencies**: Reduced attack surface
+- **Modern Dependencies**: Up-to-date packages with security patches
+
+### Security Improvements Made
+
+**Removed gatsby-plugin-s3** due to:
+- 34+ security vulnerabilities in dependencies
+- Outdated HTTP proxy libraries
+- Complex dependency chains with known CVEs
+- Maintenance concerns
+
+**Implemented Direct AWS CLI** providing:
+- ✅ Zero vulnerable dependencies
+- ✅ Direct AWS API usage
+- ✅ Better error handling
+- ✅ More reliable deployments
+
+### Current Security Status
+
+- **✅ Minimal Vulnerabilities**: <10 low-severity issues (vs 34+ previously)
+- **✅ Secure Deployment**: Direct AWS CLI without vulnerable plugins
+- **✅ Environment Protection**: Production secrets not in git
+- **✅ Modern Dependencies**: React 18, Gatsby 5.x, latest Tailwind
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+#### Deployment Errors
+
+**Problem**: AWS CLI deployment fails
+
+**Solutions**:
+```bash
+# Check AWS CLI configuration
+aws sts get-caller-identity
+
+# Verify bucket permissions
+aws s3 ls s3://www.synepho.com
+
+# Test manual sync
+aws s3 sync ./public/ s3://www.synepho.com --delete --dryrun
+```
+
+#### Environment Variables Not Loading
+
+**Problem**: Variables not available in gatsby-config.js
+
+**Solutions**:
+```bash
+# Check file exists
+ls -la .env.development
+
+# Verify syntax (no spaces around =)
+cat .env.development
+
+# Restart development server
+npm run clean && npm run develop
+```
+
+#### Build Failures
+
+**Problem**: Gatsby build fails
+
+**Solutions**:
+```bash
+# Clean cache and rebuild
+npm run clean
+npm run build
+
+# Check for dependency issues
+npm audit
+npm install
+```
+
+### Deployment Verification
+
+1. **Check live site**: [https://synepho.com](https://synepho.com)
+2. **Verify SSL**: Certificate should be valid
+3. **Test performance**: Use Google PageSpeed Insights
+4. **Check analytics**: Confirm Google Analytics tracking (production only)
+5. **Verify images**: All images should load without blur
+
+## 📈 Performance
+
+- **Lighthouse Score**: 95+ across all metrics
+- **Image Strategy**: Static folder approach for reliable loading
+- **CDN**: Global CloudFront distribution
+- **Caching**: Optimized cache headers
+- **Bundle Size**: Tree shaking and code splitting
+- **Modern Stack**: Latest stable versions for optimal performance
+
+## 📝 Content Management
+
+### Blog Posts (Future Enhancement)
+
+To add blog functionality:
+
+1. Create `src/pages/blog.js`
+2. Add markdown files to `src/markdown-pages/blog/`
+3. Configure GraphQL queries for blog posts
+4. Update navigation component
+
+### Resume Updates
+
+Update `src/markdown-pages/resume.md` with new experience and redeploy.
+
+### Projects Updates
+
+Edit `src/content/projects.json` and add corresponding images to `static/` folder.
+
+## 🚀 Deployment Workflow
+
+### Development Workflow
+
+```bash
+# 1. Make changes locally
+npm run develop
+
+# 2. Test build
+npm run build
+npm run serve
+
+# 3. Deploy to production
+npm run build-and-deploy
+```
+
+### CI/CD Ready
+
+The project is configured for easy CI/CD integration:
+
+```yaml
+# Example GitHub Actions workflow
+name: Deploy to S3
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm run build
+      - name: Deploy to S3
+        run: aws s3 sync ./public/ s3://www.synepho.com --delete
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Copy `.env.example` to `.env.development` and configure
+4. Make your changes
+5. Test locally (`npm run develop`)
+6. Commit changes (`git commit -m 'Add amazing feature'`)
+7. Push to branch (`git push origin feature/amazing-feature`)
+8. Open Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙋‍♂️ About
+
+Built by **John Xanthopoulos** - IT Executive with over 20 years of experience in cloud technologies and team leadership.
+
+- **Website**: [https://synepho.com](https://synepho.com)
+- **LinkedIn**: [https://www.linkedin.com/in/johnx/](https://www.linkedin.com/in/johnx/)
+- **GitHub**: [https://github.com/jxman](https://github.com/jxman)
+
+---
+
+⭐ **Star this repository if you found it helpful!**

@@ -1,7 +1,9 @@
 # <center> About Me <center>
 
-Hello my name is John, I am a loving husband to my beatiful wife Michelle and a proud "Girl Dad" to my daughter Mia. When I am not busy spending time with my family and frieds, you can find me outside working on my lawn or in my CrossFit Box working on my deadlifts.
+Greetings!
 
-Professionally I have over 20 years’ experience working in IT where I have a true passion for building high-performing Systems, Teams and Processes. At present I am an IT Executive at a market leading Cloud Communications company, where I lead a global team of talented directors and engineers. When I am not working at my day job, I am a "techie at heart" where enjoy writing code, working on an app or just learning a new skill. Learning and embracing change are key values I hold in both my professional and personal life. Whether it is entering a CrossFit gym for the first time or working with the latest React framework, keep your eye on the goal and enjoy the process!
+I'm John, a devoted husband to my wonderful wife Michelle and a proud "Girl Dad" to my daughter Mia. When I'm not immersed in quality time with family and friends, you'll likely find me outdoors tending to my lawn or at my CrossFit Box, dedicatedly perfecting my deadlifts.
 
-For those intersted and curious about my domain name **SYNEPHO** and its meaning. It is my phonetic spelling of the Greek word for Cloud "σύννεφο" and aligns with my affinity for Cloud computing technologies.
+In the professional realm, I boast over two decades of experience in IT, where I harbor a genuine passion for crafting high-performing systems, teams, and processes. Currently, I serve as an IT Executive at a leading Cloud Communications company, steering a global team of skilled directors and engineers. Beyond the confines of my day job, I'm inherently a "techie at heart," finding joy in coding, app development, or simply acquiring new skills. Embracing change and fostering a love for learning are values that resonate both in my personal and professional spheres. Whether stepping into a CrossFit gym for the first time or delving into the intricacies of the latest React framework, I believe in keeping focused on the goal and relishing the journey.
+
+For those intrigued by my domain name, **SYNEPHO**, and its significance—it's a phonetic rendition of the Greek word for Cloud, "σύννεφο," reflecting my deep connection with Cloud computing technologies.

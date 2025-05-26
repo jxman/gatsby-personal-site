@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "name": "Gasty Personal Branding Site",
+    "name": "Gatsby Personal Branding Site",
     "image": "../images/personal-site.png",
     "text": "This site which I created using Gatsby which is a React-based framework that allows you to be build a web experience focused on speed, scale and security.  Additionally, the site uses styling based on the tailwindcss framework as well as components from daisyUI.  My overall goal for the site was to create a simple and clean hosted site where I can showcase my personal brand and gain some hands-on skills with the latest technologies.",
     "demo_link": "https://synepho.com/",
@@ -32,7 +32,7 @@
     "github_link": "https://github.com/jxman/awsrsschk"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "My Lawn",
     "image": "../images/lawn1.jpeg",
     "text": "A custom blend of Kentucky Bluegrass and Perennial Rye, working on my lawn is one of my favorite projects.  Nothing makes me prouder than seeing those vibrant lawn strips while I sit outside with family and friends to enjoy a nice BBQ.",

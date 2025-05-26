@@ -5,25 +5,26 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/Seo"
 
-function aboutme({ data }) {
+function AboutMe({ data }) {
   const { markdownRemark } = data
 
   return (
     <>
       <Seo title="About" />
       <Layout>
-        <div className="grid grid-cols-4 ">
-          <div className="col-span-1">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="lg:col-span-1 flex justify-center">
             <StaticImage
               src="../images/me.jpeg"
-              alt="bio picture"
+              alt="Portrait photo of John Xanthopoulos"
               imgStyle={{ borderRadius: "100%" }}
+              className="w-48 h-48 lg:w-full lg:h-auto"
             />
           </div>
 
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <article
-              className=" flex-auto prose max-w-screen-md mx-auto"
+              className="prose prose-lg max-w-none"
               dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
             />
           </div>
@@ -33,7 +34,7 @@ function aboutme({ data }) {
   )
 }
 
-export default aboutme
+export default AboutMe
 
 export const pageQuery = graphql`
   {

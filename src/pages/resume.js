@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 
-function resume({ data }) {
+function Resume({ data }) {
   const { markdownRemark } = data
 
   return (
@@ -12,7 +12,7 @@ function resume({ data }) {
       <Layout>
         <div>
           <article
-            className="prose max-w-screen-md mx-auto"
+            className="prose prose-lg max-w-screen-lg mx-auto"
             dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
           />
         </div>
@@ -21,7 +21,7 @@ function resume({ data }) {
   )
 }
 
-export default resume
+export default Resume
 
 export const pageQuery = graphql`
   {

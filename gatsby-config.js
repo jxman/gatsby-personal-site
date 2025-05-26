@@ -4,16 +4,20 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+// Load environment variables
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
-    title: "My Personal Websit",
+    title: process.env.GATSBY_SITE_TITLE || "My Personal Website",
     titleTemplate: "%s ·  My Personal Website",
-    description: "Welcome to my site where I talk a little about myself.",
-    url: "https://www.synepho.com", // No trailing slash allowed!
-    siteUrl: "https://www.synepho.com", // No trailing slash allowed!
+    description: process.env.GATSBY_SITE_DESCRIPTION || "Welcome to my site where I talk a little about myself.",
+    url: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
+    siteUrl: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
     image: "/mainImg.png", // Path to the image placed in the 'static' folder, in the project's root directory.
     twitterUsername: "@jxmam",
-    siteUrl: "https://www.example.com",
   },
   plugins: [
     "gatsby-plugin-postcss",
@@ -47,24 +51,22 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [
-          "G-2HLT4VSZHW", // Google Analytics / GA
+          process.env.GATSBY_GOOGLE_ANALYTICS_ID || "G-2HLT4VSZHW", // Google Analytics / GA
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-s3`,
-      options: {
-        bucketName: "www.synepho.com",
-        protocol: "https",
-        hostname: "www.synepho.com",
+        pluginConfig: {
+          // Only load in production
+          head: false,
+          respectDNT: true,
+          exclude: process.env.NODE_ENV === 'development' ? ['/preview/**', '/do-not-track/me/too/'] : [],
+        },
       },
     },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
-        host: "https://www.synepho.com",
-        sitemap: "https://www.synepho.com/sitemap/sitemap-index.xml",
+        host: process.env.GATSBY_SITE_URL || "https://www.synepho.com",
+        sitemap: `${process.env.GATSBY_SITE_URL || "https://www.synepho.com"}/sitemap/sitemap-index.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

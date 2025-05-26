@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import propTypes from "prop-types"
+import PropTypes from "prop-types"
 import { Transition } from "@headlessui/react"
 
 function Navbar({ title }) {
@@ -176,7 +176,7 @@ Navbar.defaultProps = {
 }
 
 Navbar.propTypes = {
-  title: propTypes.string,
+  title: PropTypes.string,
 }
 
 export default Navbar
