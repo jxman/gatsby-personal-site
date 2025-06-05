@@ -51,6 +51,13 @@ function Navbar({ title }) {
                     Projects
                   </Link>
                   <Link
+                    to="/blog"
+                    className={linkStyle}
+                    activeStyle={{ textDecoration: "underline" }}
+                  >
+                    Blog
+                  </Link>
+                  <Link
                     to="/resume/"
                     className={linkStyle}
                     activeStyle={{ textDecoration: "underline" }}
@@ -74,7 +81,8 @@ function Navbar({ title }) {
                 type="button"
                 className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
-                aria-expanded="false"
+                aria-expanded={isOpen}
+                aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
               >
                 <span className="sr-only">Open main menu</span>
                 {!isOpen ? (
@@ -147,6 +155,13 @@ function Navbar({ title }) {
                   activeStyle={{ textDecoration: "underline" }}
                 >
                   Projects
+                </Link>
+                <Link
+                  to="/blog"
+                  className={mobileStyle}
+                  activeStyle={{ textDecoration: "underline" }}
+                >
+                  Blog
                 </Link>
                 <Link
                   to="/resume/"

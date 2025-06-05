@@ -54,6 +54,28 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta name="twitter:image" content={seo.image} />}
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "John Xanthopoulos",
+          "jobTitle": "IT Executive",
+          "description": "IT Executive by Day, Developer on the Weekend",
+          "url": seo.url,
+          "image": seo.image,
+          "sameAs": [
+            "https://www.linkedin.com/in/johnx/",
+            "https://github.com/jxman"
+          ],
+          "knowsAbout": ["Software Development", "IT Management", "AWS", "Terraform", "React"],
+          "alumniOf": "University of Massachusetts",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "IT Executive"
+          }
+        })}
+      </script>
     </Helmet>
   )
 }

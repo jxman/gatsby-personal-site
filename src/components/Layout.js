@@ -1,15 +1,17 @@
 import React from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
+import ScrollToTop from "./ScrollToTop"
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
-    <div className="flex flex-col justify-between h-screen">
+    <div className="flex flex-col justify-between min-h-screen transition-colors duration-300">
       <Navbar />
-      <main className="container mx-auto px-3 pb-12">{children}</main>
+      <main className="container mx-auto px-3 pb-12 flex-grow">{children}</main>
       <Footer />
+      <ScrollToTop />
     </div>
   )
 }
 
-export default layout
+export default Layout

@@ -12,21 +12,26 @@ function AboutMe({ data }) {
     <>
       <Seo title="About" />
       <Layout>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          <div className="lg:col-span-1 flex justify-center">
-            <StaticImage
-              src="../images/me.jpeg"
-              alt="Portrait photo of John Xanthopoulos"
-              imgStyle={{ borderRadius: "100%" }}
-              className="w-48 h-48 lg:w-full lg:h-auto"
-            />
-          </div>
+        <div className="max-w-6xl mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+            {/* Profile Image Section */}
+            <div className="lg:col-span-1 flex justify-center lg:justify-start">
+              <StaticImage
+                src="../images/me.jpeg"
+                alt="Portrait photo of John Xanthopoulos"
+                className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-xl"
+                width={256}
+                height={256}
+                placeholder="blurred"
+              />
+            </div>
 
-          <div className="lg:col-span-3">
-            <article
-              className="prose prose-lg max-w-none"
-              dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-            />
+            {/* Content Section */}
+            <div className="lg:col-span-3">
+              <article className="prose prose-lg prose-blue max-w-none prose-headings:text-gray-800 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-800">
+                <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+              </article>
+            </div>
           </div>
         </div>
       </Layout>
