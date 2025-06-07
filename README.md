@@ -1,5 +1,7 @@
 # John Xanthopoulos - Personal Portfolio Website
 
+![GitHub topics](https://img.shields.io/badge/topics-gatsby%20%7C%20react%20%7C%20tailwind--css%20%7C%20portfolio%20%7C%20aws--s3%20%7C%20cloudfront%20%7C%20personal--website%20%7C%20responsive--design%20%7C%20seo%20%7C%20javascript%20%7C%20static--site-blue)
+
 A modern, responsive personal portfolio website built with Gatsby and deployed to AWS S3 with CloudFront CDN using secure, direct AWS CLI deployment.
 
 ## 🌐 Live Site
