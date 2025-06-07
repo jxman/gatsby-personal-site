@@ -10,7 +10,10 @@ function AboutMe({ data }) {
 
   return (
     <>
-      <Seo title="About" />
+      <Seo 
+        title="About Me" 
+        description="Learn about John Xanthopoulos - IT Executive and developer with expertise in cloud architecture, software development, and technology leadership."
+      />
       <Layout>
         <div className="max-w-6xl mx-auto px-4 py-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -28,7 +31,7 @@ function AboutMe({ data }) {
 
             {/* Content Section */}
             <div className="lg:col-span-3">
-              <article className="prose prose-lg prose-blue max-w-none prose-headings:text-gray-800 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-800">
+              <article className="prose prose-lg prose-blue max-w-none prose-headings:text-base-content prose-p:text-base-content/70 prose-li:text-base-content/70 prose-strong:text-base-content">
                 <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
               </article>
             </div>

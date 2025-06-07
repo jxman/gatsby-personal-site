@@ -15,6 +15,11 @@ const SEO = ({ title, description, image, article }) => {
     siteUrl,
     defaultImage,
     twitterUsername,
+    keywords,
+    author,
+    linkedinUsername,
+    githubUsername,
+    lang,
   } = site.siteMetadata
 
   const seo = {
@@ -25,13 +30,29 @@ const SEO = ({ title, description, image, article }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{ lang }}>
       <meta name="description" content={seo.description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
       <meta name="image" content={seo.image} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="format-detection" content="telephone=no" />
+      <link rel="canonical" href={seo.url} />
+      
+      {/* Favicon and app icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#4A90E2" />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
-
+      <meta property="og:site_name" content="John Xanthopoulos" />
+      <meta property="og:locale" content="en_US" />
       {(article ? true : null) && <meta property="og:type" content="article" />}
+      {!article && <meta property="og:type" content="website" />}
 
       {seo.title && <meta property="og:title" content={seo.title} />}
 
@@ -40,9 +61,14 @@ const SEO = ({ title, description, image, article }) => {
       )}
 
       {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && <meta property="og:image:width" content="1200" />}
+      {seo.image && <meta property="og:image:height" content="630" />}
+      {seo.image && <meta property="og:image:type" content="image/png" />}
 
       <meta name="twitter:card" content="summary_large_image" />
-
+      {twitterUsername && (
+        <meta name="twitter:site" content={twitterUsername} />
+      )}
       {twitterUsername && (
         <meta name="twitter:creator" content={twitterUsername} />
       )}
@@ -61,18 +87,41 @@ const SEO = ({ title, description, image, article }) => {
           "@type": "Person",
           "name": "John Xanthopoulos",
           "jobTitle": "IT Executive",
-          "description": "IT Executive by Day, Developer on the Weekend",
+          "description": seo.description,
           "url": seo.url,
           "image": seo.image,
+          "email": "mailto:john@synepho.com",
           "sameAs": [
-            "https://www.linkedin.com/in/johnx/",
-            "https://github.com/jxman"
+            `https://www.linkedin.com/in/${linkedinUsername}/`,
+            `https://github.com/${githubUsername}`,
+            `https://twitter.com/${twitterUsername.replace('@', '')}`
           ],
-          "knowsAbout": ["Software Development", "IT Management", "AWS", "Terraform", "React"],
-          "alumniOf": "University of Massachusetts",
+          "knowsAbout": [
+            "Software Development", 
+            "IT Management", 
+            "AWS", 
+            "Terraform", 
+            "React", 
+            "Cloud Architecture",
+            "JavaScript",
+            "Web Development",
+            "Technology Leadership"
+          ],
+          "alumniOf": {
+            "@type": "Organization",
+            "name": "University of Massachusetts"
+          },
           "worksFor": {
             "@type": "Organization",
-            "name": "IT Executive"
+            "name": "Technology Company"
+          },
+          "hasOccupation": {
+            "@type": "Occupation",
+            "name": "IT Executive",
+            "occupationLocation": {
+              "@type": "Country",
+              "name": "United States"
+            }
           }
         })}
       </script>
@@ -106,6 +155,11 @@ const query = graphql`
         siteUrl: url
         defaultImage: image
         twitterUsername
+        keywords
+        author
+        linkedinUsername
+        githubUsername
+        lang
       }
     }
   }

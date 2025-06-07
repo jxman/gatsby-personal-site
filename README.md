@@ -87,7 +87,7 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/jxman/personal-site-new.git
    cd personal-site-new
    ```
 
@@ -271,6 +271,44 @@ Edit `src/content/projects.json`:
 - **Tailwind classes**: Use for layout and styling
 - **DaisyUI components**: Use for consistent design system
 - **Custom CSS**: Add to `src/styles/`
+
+## 🔧 Project Configuration
+
+### Git Configuration Files
+
+This project includes comprehensive git configuration for consistency and best practices:
+
+#### `.gitignore`
+- **Optimized patterns**: Covers Node.js, Gatsby, AWS, and development tools
+- **Security focused**: Excludes environment files and secrets
+- **Performance oriented**: Ignores cache and build directories
+- **Cross-platform**: Handles Windows, macOS, and Linux artifacts
+
+#### `.gitattributes`
+- **Line ending normalization**: Ensures LF endings for source files
+- **Binary file handling**: Proper handling of images and media
+- **Language detection**: Optimized for GitHub language statistics
+- **Merge strategies**: Better diff handling for generated files
+
+#### `.editorconfig`
+- **Consistent formatting**: 2-space indentation, UTF-8 encoding
+- **Cross-editor support**: Works with VS Code, Sublime, Vim, etc.
+- **File-specific rules**: Different settings for various file types
+- **Team collaboration**: Ensures consistent code style across contributors
+
+### File Structure Best Practices
+
+```
+├── .editorconfig          # Editor consistency
+├── .gitattributes         # Git file handling
+├── .gitignore             # Version control exclusions
+├── .env.example           # Environment template
+├── .env.development       # Dev environment (safe to commit)
+├── gatsby-config.js       # Framework configuration
+├── package.json           # Dependencies and scripts
+├── tailwind.config.js     # Styling configuration
+└── postcss.config.js      # CSS processing
+```
 
 ## 🔒 Security
 
@@ -490,29 +528,297 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 ```
 
+## 🔄 Git Workflow & Best Practices
+
+This project follows modern git best practices for clean, maintainable version control.
+
+### Branch Management
+
+```bash
+# Main branches
+main           # Production-ready code
+develop        # Integration branch (optional for larger teams)
+
+# Feature branches
+feature/name   # New features
+fix/name       # Bug fixes
+docs/name      # Documentation updates
+refactor/name  # Code refactoring
+```
+
+### Commit Message Conventions
+
+We follow [Conventional Commits](https://www.conventionalcommits.org/) for clear, readable commit history:
+
+```bash
+# Format: type(scope): description
+feat(auth): add user authentication system
+fix(navbar): resolve mobile menu toggle issue
+docs(readme): update deployment instructions
+style(css): improve responsive design
+refactor(api): optimize data fetching logic
+test(components): add unit tests for contact form
+chore(deps): update dependencies to latest versions
+```
+
+#### Commit Types
+
+| Type | Purpose |
+|------|---------|
+| `feat` | New feature |
+| `fix` | Bug fix |
+| `docs` | Documentation only |
+| `style` | Code style changes (formatting, etc.) |
+| `refactor` | Code refactoring without feature changes |
+| `test` | Adding or updating tests |
+| `chore` | Maintenance tasks (deps, build, etc.) |
+| `perf` | Performance improvements |
+| `ci` | CI/CD pipeline changes |
+
+### Development Workflow
+
+#### Setting Up for Development
+
+```bash
+# 1. Fork and clone
+git clone https://github.com/your-username/personal-site-new.git
+cd personal-site-new
+
+# 2. Set up upstream remote
+git remote add upstream https://github.com/jxman/personal-site-new.git
+
+# 3. Create environment file
+cp .env.example .env.development
+
+# 4. Install dependencies
+npm install
+
+# 5. Start development
+npm run develop
+```
+
+#### Feature Development Process
+
+```bash
+# 1. Update main branch
+git checkout main
+git pull upstream main
+
+# 2. Create feature branch
+git checkout -b feature/your-feature-name
+
+# 3. Make changes and commit regularly
+git add .
+git commit -m "feat(component): add new component structure"
+
+# 4. Keep branch updated (if long-running)
+git checkout main
+git pull upstream main
+git checkout feature/your-feature-name
+git rebase main
+
+# 5. Push to your fork
+git push origin feature/your-feature-name
+
+# 6. Create Pull Request via GitHub UI
+```
+
+#### Pre-Commit Checklist
+
+Before committing, ensure:
+
+- [ ] Code follows project conventions
+- [ ] All tests pass (`npm test` if available)
+- [ ] Build succeeds (`npm run build`)
+- [ ] Linting passes (`npm run lint`)
+- [ ] No console.log statements left
+- [ ] Images optimized and properly sized
+- [ ] Environment variables not hardcoded
+- [ ] No sensitive data in commits
+
+### Git Configuration
+
+#### Recommended Git Settings
+
+```bash
+# Set up your identity
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Improve git output
+git config --global color.ui auto
+git config --global core.autocrlf input  # Unix/Mac
+git config --global core.autocrlf true   # Windows
+
+# Useful aliases
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.visual '!gitk'
+```
+
+#### EditorConfig Integration
+
+This project includes `.editorconfig` for consistent formatting across editors:
+
+- **Line endings**: LF (Unix-style)
+- **Indentation**: 2 spaces
+- **Charset**: UTF-8
+- **Trim trailing whitespace**: Yes
+- **Insert final newline**: Yes
+
+### Repository Structure
+
+```
+.
+├── .editorconfig          # Editor configuration
+├── .gitattributes         # Git file handling rules
+├── .gitignore             # Files to ignore in git
+├── .env.example           # Environment variables template
+├── .env.development       # Development environment (committed)
+├── gatsby-config.js       # Gatsby configuration
+├── package.json           # Dependencies and scripts
+├── README.md              # This file
+├── src/                   # Source code
+├── static/                # Static assets
+└── public/                # Generated site (git ignored)
+```
+
+### Deployment Workflow
+
+#### Manual Deployment
+
+```bash
+# 1. Ensure clean working directory
+git status
+
+# 2. Build for production
+npm run build
+
+# 3. Deploy to AWS S3
+npm run deploy
+
+# 4. Tag release (optional)
+git tag -a v1.0.0 -m "Release version 1.0.0"
+git push origin v1.0.0
+```
+
+#### CI/CD Pipeline Ready
+
+Environment variables for GitHub Actions:
+
+```yaml
+secrets:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  AWS_REGION: us-east-1
+  AWS_S3_BUCKET: www.synepho.com
+```
+
+### Issue and Pull Request Guidelines
+
+#### Creating Issues
+
+Use these templates:
+
+**Bug Report:**
+```markdown
+## Bug Description
+Brief description of the issue
+
+## Steps to Reproduce
+1. Step one
+2. Step two
+3. Step three
+
+## Expected Behavior
+What should happen
+
+## Actual Behavior
+What actually happens
+
+## Environment
+- OS: [e.g., macOS 12.0]
+- Browser: [e.g., Chrome 95]
+- Node.js: [e.g., 18.x]
+```
+
+**Feature Request:**
+```markdown
+## Feature Description
+Brief description of the proposed feature
+
+## Use Case
+Why is this feature needed?
+
+## Proposed Solution
+How should this feature work?
+
+## Additional Context
+Any other relevant information
+```
+
+#### Pull Request Process
+
+1. **Reference Issues**: Link to relevant issues
+2. **Clear Description**: Explain what changes were made
+3. **Testing**: Include testing information
+4. **Screenshots**: For UI changes, include before/after images
+5. **Documentation**: Update README if needed
+
+### Security Best Practices
+
+- **Never commit secrets**: Use environment variables
+- **Review dependencies**: Run `npm audit` regularly
+- **Keep branches updated**: Regular rebasing prevents conflicts
+- **Sign commits**: Consider GPG signing for important commits
+- **Review .gitignore**: Ensure sensitive files are excluded
+
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Copy `.env.example` to `.env` and configure
-4. Install dependencies (`npm install`)
-5. Start development server (`npm run develop`)
-6. Make your changes
-7. Test your changes locally
-8. Run linting (`npm run lint`) and formatting (`npm run format`)
-9. Test production build (`npm run build && npm run serve`)
-10. Commit changes (`git commit -m 'Add amazing feature'`)
-11. Push to branch (`git push origin feature/amazing-feature`)
-12. Open Pull Request
+Ready to contribute? Follow our git workflow above and these guidelines:
+
+### Quick Start for Contributors
+
+```bash
+# 1. Fork repository on GitHub
+# 2. Clone your fork
+git clone https://github.com/your-username/personal-site-new.git
+cd personal-site-new
+
+# 3. Set up development environment
+cp .env.example .env.development
+npm install
+npm run develop
+
+# 4. Create feature branch
+git checkout -b feature/amazing-feature
+
+# 5. Make changes and test
+# (Make your amazing changes here)
+npm run build      # Test build
+npm run serve      # Test production build
+
+# 6. Commit using conventional commits
+git add .
+git commit -m "feat(component): add amazing new feature"
+
+# 7. Push and create PR
+git push origin feature/amazing-feature
+# Create Pull Request via GitHub UI
+```
 
 ### Code Quality Standards
 
-- Follow React best practices
-- Use TypeScript-style prop validation
-- Ensure accessibility compliance
-- Add proper alt text for images
-- Test on multiple devices and browsers
-- Maintain security best practices
+- **React Best Practices**: Follow React patterns and hooks guidelines
+- **Accessibility**: Ensure WCAG 2.1 AA compliance
+- **Performance**: Optimize images and minimize bundle size
+- **Security**: Follow OWASP guidelines, never commit secrets
+- **Testing**: Write tests for new features (when test framework is added)
+- **Documentation**: Update README for significant changes
 
 ## 📄 License
 

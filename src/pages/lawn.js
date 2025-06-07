@@ -5,7 +5,10 @@ import { StaticImage } from "gatsby-plugin-image"
 function lawn() {
   return (
     <>
-      <Seo title="My Lawn" />
+      <Seo 
+        title="Lawn Care & Landscaping Project - Personal Transformation Gallery"
+        description="View John Xanthopoulos' lawn care and landscaping transformation project. Browse before and after photos showcasing dedication to excellence in all endeavors."
+      />
       <a href="/projects/" className="btn btn-outline">
         Back to Projects
       </a>

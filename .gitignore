@@ -1,36 +1,26 @@
 # ====================
 # Gatsby Specific
 # ====================
-
-# Gatsby build outputs
 public/
 .cache/
-
-# Gatsby development files
 .gatsby-context.js
-.env.development
-.env.production
 
 # ====================
-# Node.js & npm
+# Node.js & Dependencies
 # ====================
-
-# Dependency directories
 node_modules/
 jspm_packages/
+bower_components/
 
-# npm & yarn
+# Package managers
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 .npm
 .yarn-integrity
 .pnp/
 .pnp.js
-
-# Package lock files (choose one)
-# yarn.lock
-# package-lock.json
 
 # Runtime data
 pids
@@ -39,81 +29,69 @@ pids
 *.pid.lock
 
 # ====================
+# Environment & Secrets
+# ====================
+.env*
+!.env.example
+
+# ====================
 # AWS Deployment
 # ====================
-
-# Build artifacts
 build.zip
 dist/
 *.zip
-
-# AWS credentials and config
 .aws/
 aws-exports.js
 
-# Terraform (if using IaC)
+# Terraform
 *.tfstate
 *.tfstate.*
 .terraform/
 *.tfvars
 
 # ====================
-# Environment & Secrets
-# ====================
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# API keys and secrets
-.env.*
-!.env.example
-
-# ====================
 # Development Tools
 # ====================
-
-# ESLint
 .eslintcache
-
-# Prettier
-.prettierignore
+.stylelintcache
+*.tsbuildinfo
 
 # Testing
 coverage/
 .nyc_output
 jest_0/
 
-# TypeScript
-*.tsbuildinfo
+# Cache directories
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+.parcel-cache/
+.webpack/
+.rollup/
+.next/
+.nuxt/
+.serverless/
+.fusebox/
+.dynamodb/
 
 # ====================
 # IDE & Editors
 # ====================
-
-# Visual Studio Code
 .vscode/
 !.vscode/settings.json.example
 !.vscode/extensions.json
-
-# WebStorm/IntelliJ
+.vscode-test
 .idea/
 *.iml
-
-# Sublime Text
 *.sublime-project
 *.sublime-workspace
 
 # Vim
 *.swp
 *.swo
-*~
 
 # Emacs
-*~
 \#*\#
 /.emacs.desktop
 /.emacs.desktop.lock
@@ -122,8 +100,6 @@ jest_0/
 # ====================
 # Operating Systems
 # ====================
-
-# macOS
 .DS_Store
 .DS_Store?
 .AppleDouble
@@ -131,10 +107,6 @@ jest_0/
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
-
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -145,8 +117,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
-
-# Linux
 *~
 .fuse_hidden*
 .directory
@@ -156,57 +126,21 @@ $RECYCLE.BIN/
 # ====================
 # Logs & Debugging
 # ====================
-
-# Logs
 logs/
 *.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-
-# Debug files
 .debug
 debug.log
 
 # ====================
-# Build Tools & Cache
-# ====================
-
-# Webpack
-.webpack/
-
-# Rollup
-.rollup/
-
-# Parcel
-.parcel-cache/
-
-# Next.js
-.next/
-
-# Nuxt.js
-.nuxt/
-
-# Storybook
-.storybook-out/
-
-# ====================
 # Temporary & Backup Files
 # ====================
-
-# Temporary files
 *.tmp
 *.temp
 temp/
 tmp/
-
-# Backup files
 *.backup
 *.bak
 *.orig
-
-# Our project specific backups
 *.js.backup
 *.md.backup
 *.json.backup
@@ -214,100 +148,25 @@ tmp/
 # ====================
 # Miscellaneous
 # ====================
-
-# Optional REPL history
 .node_repl_history
-
-# Output of 'npm pack'
 *.tgz
-
-# Yarn Integrity file
-.yarn-integrity
-
-# dotenv environment variables file
-.env.test
-
-# Microbundle cache
-.rpt2_cache/
-.rts2_cache_cjs/
-.rts2_cache_es/
-.rts2_cache_umd/
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Optional stylelint cache
-.stylelintcache
-
-# Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
-
-# Coverage directory used by tools like istanbul
-coverage/
-*.lcov
-
-# Grunt intermediate storage
-.grunt
-
-# Bower dependency directory
-bower_components
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons
-build/Release
-
-# Dependency directories
-node_modules/
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
-# Optional eslint cache
-.eslintcache
-
-# Serverless directories
-.serverless/
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
 .tern-port
-
-# Stores VSCode versions used for testing VSCode extensions
-.vscode-test
+.grunt
+.lock-wscript
+build/Release
+*.lcov
 
 # ====================
 # Project Specific
 # ====================
-
-# Static image copies (if using automated copying)
 static/me*.jpeg
 static/me*.jpg
 static/me*.png
-
-# Gatsby TypeScript (if added later)
 *.d.ts
 .tsc-out/
-
-# Documentation builds
 docs/build/
 
-# Ignore large media files that shouldn't be in git
+# Large media files
 *.mp4
 *.mov
 *.avi
@@ -315,13 +174,3 @@ docs/build/
 *.wmv
 *.flv
 *.webm
-
-# Ignore large image files (keep smaller ones)
-# Uncomment if you have large source images
-# *.psd
-# *.ai
-# *.sketch
-
-# ====================
-# End of .gitignore
-# ====================

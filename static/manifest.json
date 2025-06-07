@@ -1,0 +1,21 @@
+{
+  "name": "John Xanthopoulos - IT Executive & Developer",
+  "short_name": "JX Portfolio",
+  "description": "Personal website of John Xanthopoulos, IT Executive and Cloud Technology Developer",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4A90E2",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

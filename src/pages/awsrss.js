@@ -5,7 +5,10 @@ import Seo from "../components/Seo"
 function awsrss() {
   return (
     <>
-      <Seo title="AWS RSS Project" />
+      <Seo 
+        title="AWS RSS Status Check System - Cloud Monitoring Solution"
+        description="AWS RSS status monitoring system built by John Xanthopoulos. Features real-time health checks, automated notifications, and comprehensive AWS service status tracking."
+      />
 
       <a href="/projects/" className="btn btn-outline">
         Back to Projects

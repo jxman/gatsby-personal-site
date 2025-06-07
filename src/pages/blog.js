@@ -6,13 +6,16 @@ import Seo from "../components/Seo"
 const BlogPage = () => {
   return (
     <>
-      <Seo title="Blog" />
+      <Seo 
+        title="Blog" 
+        description="Technology insights, development practices, and my journey with AI-powered development. Exploring AWS, React, Terraform, and modern software engineering."
+      />
       <Layout>
         <div className="max-w-4xl mx-auto px-4 py-8">
           {/* Page Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Blog</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-base-content mb-4">Blog</h1>
+            <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
               Insights on technology leadership, development practices, and my journey with AI-powered development
             </p>
           </div>
@@ -35,14 +38,14 @@ const BlogPage = () => {
                   </Link>
                 </h2>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-base-content/70 mb-4 leading-relaxed">
                   Exploring how AI pair programming tools like Claude Code and GitHub Copilot have transformed 
                   my development workflow, from solving complex coding challenges to building production applications. 
                   A practical perspective on the evolution of developer tooling and productivity.
                 </p>
                 
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <div className="flex items-center gap-4 text-sm text-base-content/60">
                     <span>Published: December 16, 2024</span>
                     <span>•</span>
                     <span>5 min read</span>
@@ -64,24 +67,24 @@ const BlogPage = () => {
 
           {/* Coming Soon Section */}
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-700 mb-4">More Posts Coming Soon</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-2xl font-semibold text-base-content/90 mb-4">More Posts Coming Soon</h3>
+            <p className="text-base-content/70 mb-8">
               I'm working on more content covering cloud architecture, team leadership, and development best practices.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="card bg-base-200 border-2 border-dashed border-gray-300">
                 <div className="card-body text-center">
-                  <h4 className="font-semibold text-gray-600">Building High-Performance Teams</h4>
-                  <p className="text-sm text-gray-500">Leadership strategies for technology teams</p>
+                  <h4 className="font-semibold text-base-content/70">Building High-Performance Teams</h4>
+                  <p className="text-sm text-base-content/60">Leadership strategies for technology teams</p>
                   <div className="badge badge-ghost">Coming Soon</div>
                 </div>
               </div>
               
               <div className="card bg-base-200 border-2 border-dashed border-gray-300">
                 <div className="card-body text-center">
-                  <h4 className="font-semibold text-gray-600">Cloud Architecture Patterns</h4>
-                  <p className="text-sm text-gray-500">Lessons from $400M+ platform responsibility</p>
+                  <h4 className="font-semibold text-base-content/70">Cloud Architecture Patterns</h4>
+                  <p className="text-sm text-base-content/60">Lessons from $400M+ platform responsibility</p>
                   <div className="badge badge-ghost">Coming Soon</div>
                 </div>
               </div>
@@ -91,7 +94,7 @@ const BlogPage = () => {
           {/* Newsletter Signup */}
           <div className="mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Stay Updated</h3>
-            <p className="text-gray-600 mb-6">
+            <p className="text-base-content/70 mb-6">
               Get notified when I publish new articles about technology leadership and development.
             </p>
             <Link to="/contact" className="btn btn-primary">

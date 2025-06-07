@@ -5,7 +5,10 @@ import Seo from "../components/Seo"
 function awssite() {
   return (
     <>
-      <Seo title="AWS Hosting Site" />
+      <Seo 
+        title="AWS Multi-Region Hosting Architecture - Cloud Infrastructure Project"
+        description="Explore John Xanthopoulos' AWS multi-region hosting solution featuring Terraform automation, CloudFront distribution, geo-load balancing, and automated failover capabilities."
+      />
 
       <a href="/projects/" className="btn btn-outline">
         Back to Projects

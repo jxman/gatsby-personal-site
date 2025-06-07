@@ -28,14 +28,17 @@ function Resume({ data }) {
 
   return (
     <>
-      <Seo title="Resume" />
+      <Seo 
+        title="John Xanthopoulos Resume - IT Executive & Cloud Solutions Architect"
+        description="View and download the professional resume of John Xanthopoulos, IT Executive with 20+ years experience in cloud architecture, team leadership, and enterprise technology solutions."
+      />
       <Layout>
         <div className="max-w-5xl mx-auto px-4 py-8">
           {/* Header with Download/Print Actions */}
           <div className="flex justify-between items-center mb-8 print:hidden">
             <div>
-              <h1 className="text-3xl font-bold text-gray-800">Professional Resume</h1>
-              <p className="text-gray-600 mt-2">IT Executive • Cloud Architecture • Team Leadership</p>
+              <h1 className="text-3xl font-bold text-base-content">Professional Resume</h1>
+              <p className="text-base-content/70 mt-2">IT Executive • Cloud Architecture • Team Leadership</p>
               <p className="text-sm text-blue-600 mt-1">Contact via LinkedIn or website contact form</p>
             </div>
             <div className="flex gap-3">
@@ -71,13 +74,13 @@ function Resume({ data }) {
           {/* Resume Content */}
           <div className="bg-white shadow-sm border rounded-lg p-8 print:shadow-none print:border-none print:p-0">
             <article className="prose prose-lg max-w-none 
-              prose-headings:text-gray-800 
+              prose-headings:text-base-content 
               prose-h1:text-4xl prose-h1:font-bold prose-h1:text-center prose-h1:mb-2
-              prose-h2:text-xl prose-h2:font-semibold prose-h2:text-gray-700 prose-h2:border-b-2 prose-h2:border-blue-600 prose-h2:pb-2 prose-h2:mb-4 prose-h2:mt-8
-              prose-h3:text-lg prose-h3:font-semibold prose-h3:text-gray-800 prose-h3:mb-2
-              prose-p:text-gray-600 prose-p:leading-relaxed
-              prose-li:text-gray-600 prose-li:leading-relaxed
-              prose-strong:text-gray-800 prose-strong:font-semibold
+              prose-h2:text-xl prose-h2:font-semibold prose-h2:text-base-content/90 prose-h2:border-b-2 prose-h2:border-blue-600 prose-h2:pb-2 prose-h2:mb-4 prose-h2:mt-8
+              prose-h3:text-lg prose-h3:font-semibold prose-h3:text-base-content prose-h3:mb-2
+              prose-p:text-base-content/70 prose-p:leading-relaxed
+              prose-li:text-base-content/70 prose-li:leading-relaxed
+              prose-strong:text-base-content prose-strong:font-semibold
               prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline
               prose-hr:border-gray-300
               print:prose-sm">

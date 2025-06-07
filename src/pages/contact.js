@@ -39,13 +39,16 @@ function Contact() {
 
   return (
     <>
-      <Seo title="Contact" />
+      <Seo 
+        title="Contact John Xanthopoulos - IT Executive & Cloud Architect"
+        description="Get in touch with John Xanthopoulos for technology leadership consulting, cloud architecture discussions, and professional collaboration opportunities. Connect via LinkedIn or email."
+      />
       <Layout>
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Page Header */}
           <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <h1 className="text-4xl font-bold text-base-content mb-4">Get In Touch</h1>
+            <p className="text-xl text-base-content/70 max-w-2xl mx-auto">
               Let's connect! Whether you have questions about technology leadership, 
               cloud architecture, or want to discuss potential collaborations.
             </p>
@@ -55,7 +58,7 @@ function Contact() {
             {/* Contact Information */}
             <AnimatedSection animation="fadeInLeft" delay={200}>
               <div className="bg-gradient-to-br from-primary/5 to-secondary/5 rounded-lg p-8">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Let's Connect</h2>
+                <h2 className="text-2xl font-semibold text-base-content mb-6">Let's Connect</h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-center space-x-4">
@@ -63,8 +66,8 @@ function Contact() {
                       <FaLinkedin className="text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">LinkedIn</h3>
-                      <p className="text-gray-600">Best way to reach me</p>
+                      <h3 className="font-semibold text-base-content">LinkedIn</h3>
+                      <p className="text-base-content/70">Best way to reach me</p>
                       <a 
                         href="https://www.linkedin.com/in/johnx/" 
                         target="_blank" 
@@ -81,8 +84,8 @@ function Contact() {
                       <FaGithub className="text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">GitHub</h3>
-                      <p className="text-gray-600">Check out my projects</p>
+                      <h3 className="font-semibold text-base-content">GitHub</h3>
+                      <p className="text-base-content/70">Check out my projects</p>
                       <a 
                         href="https://github.com/jxman" 
                         target="_blank" 
@@ -99,16 +102,16 @@ function Contact() {
                       <FaEnvelope className="text-xl" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-800">Contact Form</h3>
-                      <p className="text-gray-600">Currently under development</p>
-                      <span className="text-gray-500 text-sm">Please use LinkedIn for now</span>
+                      <h3 className="font-semibold text-base-content">Contact Form</h3>
+                      <p className="text-base-content/70">Currently under development</p>
+                      <span className="text-base-content/60 text-sm">Please use LinkedIn for now</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-4 bg-info/10 border-l-4 border-info rounded-r-lg">
-                  <h4 className="font-semibold text-gray-800 mb-2">Professional Inquiries</h4>
-                  <p className="text-gray-600 text-sm">
+                  <h4 className="font-semibold text-base-content mb-2">Professional Inquiries</h4>
+                  <p className="text-base-content/70 text-sm">
                     For business opportunities, speaking engagements, or technology consulting, 
                     please reach out via LinkedIn with a detailed message.
                   </p>
@@ -120,7 +123,7 @@ function Contact() {
             <AnimatedSection animation="fadeInRight" delay={300}>
               <div className="bg-base-100 rounded-lg shadow-xl p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-semibold text-gray-800">Send a Message</h2>
+                  <h2 className="text-2xl font-semibold text-base-content">Send a Message</h2>
                   <div className="badge badge-warning">Under Development</div>
                 </div>
 
@@ -195,7 +198,7 @@ function Contact() {
                 </form>
 
                 <div className="mt-6 p-4 bg-warning/10 border-l-4 border-warning rounded-r-lg">
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-base-content/70">
                     <strong>Note:</strong> This contact form is currently under development. 
                     For immediate responses, please connect with me on LinkedIn.
                   </p>
@@ -219,11 +222,11 @@ function Contact() {
                   </div>
                   <div>
                     <p className="font-semibold">Coming Soon!</p>
-                    <p className="text-sm text-gray-600">Contact form functionality is in development</p>
+                    <p className="text-sm text-base-content/70">Contact form functionality is in development</p>
                   </div>
                 </div>
                 
-                <p className="text-gray-700 mb-4">
+                <p className="text-base-content/90 mb-4">
                   Thank you for your interest in reaching out! I'm currently working on implementing 
                   the contact form functionality. In the meantime, I'd love to connect with you on LinkedIn.
                 </p>

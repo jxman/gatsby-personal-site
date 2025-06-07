@@ -8,7 +8,10 @@ import AnimatedSection from "../components/AnimatedSection"
 const IndexPage = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo 
+        title="Home" 
+        description="John Xanthopoulos - IT Executive by day, developer on weekends. Sharing insights on AWS, React, Terraform, and technology leadership."
+      />
       <Layout>
         {/* Hero Section */}
         <div className="hero min-h-[80vh] bg-gradient-to-br from-base-100 to-base-200">
@@ -20,7 +23,9 @@ const IndexPage = () => {
                   src="../images/me2.jpeg"
                   alt="Professional headshot of John Xanthopoulos"
                   className="max-w-sm rounded-lg shadow-2xl hover:shadow-3xl transition-shadow duration-300"
-                  placeholder="blurred"
+                  placeholder="none"
+                  quality={95}
+                  formats={["auto", "webp", "avif"]}
                   width={384}
                   height={512}
                 />
@@ -30,20 +35,20 @@ const IndexPage = () => {
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-2xl">
               <AnimatedSection animation="fadeInLeft">
-                <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+                <h1 className="text-5xl lg:text-6xl font-bold text-base-content mb-6">
                   John Xanthopoulos
                 </h1>
               </AnimatedSection>
               
               <AnimatedSection animation="fadeInLeft" delay={100}>
-                <div className="text-2xl lg:text-3xl text-gray-600 mb-6 space-y-2">
+                <div className="text-2xl lg:text-3xl text-base-content/80 mb-6 space-y-2">
                   <p className="font-medium">IT Executive by Day</p>
                   <p className="text-primary font-semibold">Developer on the Weekend</p>
                 </div>
               </AnimatedSection>
               
               <AnimatedSection animation="fadeInLeft" delay={200}>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="text-lg text-base-content/70 mb-8 leading-relaxed">
                   Passionate technology leader with 20+ years of experience driving digital transformation, 
                   building high-performing teams, and architecting cloud-native solutions. When I'm not leading 
                   strategic initiatives, you'll find me coding personal projects and exploring the latest technologies.
@@ -93,8 +98,8 @@ const IndexPage = () => {
         <AnimatedSection animation="fadeInUp" className="py-16 bg-base-100">
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Experience Highlights</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-base-content mb-4">Experience Highlights</h2>
+              <p className="text-base-content/70 max-w-2xl mx-auto">
                 Two decades of technology leadership driving innovation and results
               </p>
             </AnimatedSection>
@@ -136,8 +141,8 @@ const IndexPage = () => {
         <AnimatedSection animation="fadeInUp" className="py-16 bg-gradient-to-br from-base-200 to-base-100">
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Core Technologies</h2>
-              <p className="text-gray-600">Modern tools and platforms I work with regularly</p>
+              <h2 className="text-3xl font-bold text-base-content mb-4">Core Technologies</h2>
+              <p className="text-base-content/70">Modern tools and platforms I work with regularly</p>
             </AnimatedSection>
             
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -152,7 +157,7 @@ const IndexPage = () => {
                 <AnimatedSection key={index} animation="slideInUp" delay={index * 100}>
                   <div className="text-center p-4 bg-base-100 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300">
                     <div className="text-3xl mb-2 animate-pulse">{tech.icon}</div>
-                    <div className="font-semibold text-gray-700">{tech.name}</div>
+                    <div className="font-semibold text-base-content/90">{tech.name}</div>
                   </div>
                 </AnimatedSection>
               ))}
@@ -164,8 +169,8 @@ const IndexPage = () => {
         <AnimatedSection animation="fadeInUp" className="py-16 bg-base-100">
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-4">Latest Blog Post</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-base-content mb-4">Latest Blog Post</h2>
+              <p className="text-base-content/70 max-w-2xl mx-auto">
                 Recent insights on technology, leadership, and development
               </p>
             </AnimatedSection>
@@ -188,14 +193,14 @@ const IndexPage = () => {
                       </Link>
                     </h3>
                     
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-base-content/70 mb-6 leading-relaxed">
                       Exploring how AI pair programming tools like Claude Code and GitHub Copilot have transformed 
                       my development workflow, from solving complex coding challenges to building production applications. 
                       A practical perspective on the evolution of developer tooling and productivity.
                     </p>
                     
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
+                      <div className="flex items-center gap-4 text-sm text-base-content/60">
                         <span>Published: December 16, 2024</span>
                         <span className="hidden sm:inline">•</span>
                         <span>5 min read</span>

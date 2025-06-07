@@ -33,11 +33,11 @@ const AIPairProgrammingPost = () => {
               <div className="badge badge-accent">Productivity</div>
             </div>
             
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-5xl font-bold text-base-content mb-6 leading-tight">
               From Coding Challenges to Real-World Solutions: My Journey with AI Pair Programming
             </h1>
             
-            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-gray-600 mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-base-content/70 mb-8">
               <div className="flex items-center gap-4">
                 <span>Published: December 16, 2024</span>
                 <span className="hidden sm:inline">•</span>
@@ -61,17 +61,17 @@ const AIPairProgrammingPost = () => {
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none 
-            prose-headings:text-gray-800 
+            prose-headings:text-base-content 
             prose-h2:text-2xl prose-h2:font-semibold prose-h2:mt-8 prose-h2:mb-4
             prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3
-            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-4
-            prose-li:text-gray-700 prose-li:leading-relaxed
-            prose-strong:text-gray-800 prose-strong:font-semibold
+            prose-p:text-base-content/80 prose-p:leading-relaxed prose-p:mb-4
+            prose-li:text-base-content/80 prose-li:leading-relaxed
+            prose-strong:text-base-content prose-strong:font-semibold
             prose-a:text-primary prose-a:no-underline hover:prose-a:underline
             prose-code:text-accent prose-code:bg-base-200 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
             prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-4 prose-blockquote:italic">
             
-            <p className="text-xl text-gray-600 italic mb-8">
+            <p className="text-xl text-base-content/70 italic mb-8">
               Ever wonder how a holiday coding challenge could lead to revolutionizing your work processes? 
               That's exactly what happened to me this December, and I'm excited to share how my exploration 
               of AI assistants evolved from solving puzzles to building production-ready cloud infrastructure.
@@ -252,7 +252,7 @@ const AIPairProgrammingPost = () => {
             </p>
             
             <div className="bg-primary/5 border-l-4 border-primary p-6 mt-8 rounded-r-lg">
-              <p className="italic text-gray-600 mb-0">
+              <p className="italic text-base-content/70 mb-0">
                 <strong>Note:</strong> This article represents a real journey in AI-assisted development, where even its own 
                 creation demonstrates the potential of human-AI collaboration in technical writing and documentation.
               </p>
@@ -264,8 +264,8 @@ const AIPairProgrammingPost = () => {
           <footer className="mt-16 pt-8 border-t border-gray-200">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <h4 className="font-semibold text-gray-800 mb-2">About the Author</h4>
-                <p className="text-gray-600">
+                <h4 className="font-semibold text-base-content mb-2">About the Author</h4>
+                <p className="text-base-content/70">
                   John Xanthopoulos is an IT Executive with 20+ years of experience leading technology teams 
                   and architecting cloud solutions.
                 </p>

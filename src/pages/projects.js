@@ -16,13 +16,16 @@ function Projects({ data }) {
 
   return (
     <>
-      <Seo title="Projects" />
+      <Seo 
+        title="Projects" 
+        description="Explore my portfolio of web development projects featuring AWS, React, Terraform, and modern cloud architecture solutions."
+      />
       <Layout>
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Page Header */}
           <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">My Projects</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-4xl font-bold text-base-content mb-4">My Projects</h1>
+            <p className="text-xl text-base-content/70 max-w-3xl mx-auto">
               A collection of personal and professional projects showcasing my experience with modern web technologies, cloud architecture, and full-stack development.
             </p>
           </AnimatedSection>
@@ -47,7 +50,7 @@ function Projects({ data }) {
 
                     <div className="card-body lg:w-1/2">
                       <div className="flex items-center gap-2 mb-2">
-                        <h2 className="card-title text-2xl font-bold text-gray-800">{project.name}</h2>
+                        <h2 className="card-title text-2xl font-bold text-base-content">{project.name}</h2>
                         {project.id <= 4 && (
                           <div className="badge badge-primary badge-sm">Tech Project</div>
                         )}
@@ -55,7 +58,7 @@ function Projects({ data }) {
                           <div className="badge badge-success badge-sm">Personal</div>
                         )}
                       </div>
-                      <p className="text-gray-600 leading-relaxed mb-6">{project.text}</p>
+                      <p className="text-base-content/70 leading-relaxed mb-6">{project.text}</p>
                       <div className="card-actions justify-end gap-3">
                         {project.demo_link && (
                           <a
@@ -92,8 +95,8 @@ function Projects({ data }) {
               ))
             ) : (
               <div className="text-center py-16">
-                <p className="text-gray-500 text-lg">No projects found. Check console for debug information.</p>
-                <p className="text-gray-400 text-sm mt-2">Expected {projectslist ? projectslist.length : 0} projects</p>
+                <p className="text-base-content/60 text-lg">No projects found. Check console for debug information.</p>
+                <p className="text-base-content/50 text-sm mt-2">Expected {projectslist ? projectslist.length : 0} projects</p>
               </div>
             )}
           </div>
