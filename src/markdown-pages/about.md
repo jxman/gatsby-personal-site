@@ -13,7 +13,7 @@ With over two decades in IT leadership, I have a genuine passion for building hi
 Beyond my executive role, I'm a "techie at heart" who finds joy in:
 
 - **Hands-on Development**: Building applications and experimenting with new frameworks
-- **Continuous Learning**: Staying current with emerging technologies and methodologies  
+- **Continuous Learning**: Staying current with emerging technologies and methodologies
 - **Team Building**: Developing people and fostering collaborative, high-performance cultures
 - **Innovation**: Finding creative solutions to complex technical and business challenges
 
@@ -27,4 +27,4 @@ Curious about my domain name? **SYNEPHO** is a phonetic rendition of the Greek w
 
 ---
 
-*Ready to connect? Feel free to reach out through [LinkedIn](https://www.linkedin.com/in/johnx/) or the [contact form](/contact/) on this site.*
+_Ready to connect? Feel free to reach out through [LinkedIn](https://www.linkedin.com/in/johnx/) or the [contact form](/contact/) on this site._

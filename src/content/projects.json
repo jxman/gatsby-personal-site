@@ -1,22 +1,38 @@
 [
   {
     "id": 1,
-    "name": "Tesla App",
+    "name": "Lawn.Smart - USDA Zone-Intelligent Lawn Care",
+    "image": "../images/lawn-smart-app.png",
+    "text": "A comprehensive USDA zone-customized lawn care management application built with React and Tailwind CSS. Features PWA support, glassmorphism UI design, and personalized guidance for all 50 US states and hardiness zones 3a-11b. Includes month-by-month task management, equipment tracking, photo documentation, weather alerts, and zone-specific timing recommendations for optimal lawn health across all US regions.",
+    "demo_link": "https://www.lawnsmartapp.com",
+    "github_link": "https://github.com/jxman/smart-lawn"
+  },
+  {
+    "id": 2,
+    "name": "Tesla Dashboard",
     "image": "../images/tesla-app.png",
-    "text": "React-based application that uses the Geolocation API within a Tesla car browser to provide real-time weather, traffic, news, and local Yelp points of interest. My initial use-case was to create a default homepage in your vehicle to get local information before leaving for your next destination. Unfortunately, in the recent V11 update Tesla disabled the Geolocation API in the browser and it currently doesn't work as expected. I am currently looking into workarounds or a possible opportunity of a Tesla App store where I can further expand my concept.",
+    "text": "A comprehensive React-based dashboard designed for Tesla vehicle browsers, providing location-based weather, traffic conditions, news updates, and nearby points of interest. Features real-time weather with detailed forecasts, live news feeds, traffic conditions via Waze integration, and GPS location detection. Built with React 18 and Tailwind CSS with a Tesla-themed dark UI optimized for in-vehicle use. Future roadmap includes Google Maps integration, Tesla Supercharger finder, and EV charging station search.",
     "demo_link": "https://teslaweather.netlify.app/",
     "github_link": "https://github.com/jxman/tesla-app"
   },
   {
-    "id": 2,
-    "name": "Gatsby Personal Branding Site",
+    "id": 3,
+    "name": "Gatsby Personal Portfolio Website",
     "image": "../images/personal-site.png",
-    "text": "This site which I created using Gatsby, a React-based framework that allows you to build a web experience focused on speed, scale and security. Additionally, the site uses styling based on the Tailwind CSS framework as well as components from DaisyUI. My overall goal for the site was to create a simple and clean hosted site where I can showcase my personal brand and gain hands-on skills with the latest technologies.",
+    "text": "A modern, responsive personal portfolio website built with Gatsby.js, React 18, and Tailwind CSS, deployed to AWS S3 with CloudFront CDN. Features comprehensive SEO optimization, StaticImage performance enhancements, structured data (JSON-LD), accessibility compliance, and functional contact forms. Utilizes direct AWS CLI deployment for enhanced security, eliminating vulnerable plugin dependencies. Includes Google Analytics, sitemap generation, and follows modern git best practices with conventional commits.",
     "demo_link": "https://synepho.com/",
-    "github_link": "https://github.com/jxman/gatsby-personal-site"
+    "github_link": "https://github.com/jxman/personal-site-new"
   },
   {
-    "id": 3,
+    "id": 4,
+    "name": "AWS Health Notifications",
+    "image": "../images/aws-architecture-official-icons.svg",
+    "text": "Automated AWS Health Event notification system with enhanced formatting and multi-environment support. Built with Terraform, this project provides real-time monitoring of AWS service health events with customizable email and SMS alerts. Features secure CI/CD deployment through GitHub Actions, modular infrastructure design, and comprehensive monitoring across development and production environments. Developed using AI-assisted pair programming techniques for optimal code quality and documentation.",
+    "demo_link": "../awshealth/",
+    "github_link": "https://github.com/jxman/awshealthnotification"
+  },
+  {
+    "id": 5,
     "name": "AWS Multi-region Hosted Site",
     "image": "../images/aws-site.png",
     "text": "Instead of going with a hosting provider like Netlify or Vercel, I wanted to create my own production-grade and fully redundant site within Amazon Web Services. Click below to view more details on the design which includes multi-region hosting, CDN caching and automated TLS key renewals. All the AWS resources for this project have been built and configured using Terraform code and fully automated. (See my Github repo below for more details.)",
@@ -24,7 +40,7 @@
     "github_link": "https://github.com/jxman/synepho-s3cf-site"
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "AWS RSS Status Check Site",
     "image": "../images/awsrss.png",
     "text": "A Node.js app running on AWS Lambda with a DynamoDB backend and using the Serverless Framework. This app is designed to scan a list of 3rd party vendor RSS status pages and alert on any notifications for outages and/or maintenance updates. Once a vendor reports an issue, an alert is sent to a pre-defined webhook and the state of the alert is managed within a DynamoDB table. Currently I am working on a React web-based front-end to both admin the listing of sites and view the status of alerts.",
@@ -32,7 +48,7 @@
     "github_link": "https://github.com/jxman/awsrsschk"
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "My Lawn",
     "image": "../images/lawn1.jpeg",
     "text": "A custom blend of Kentucky Bluegrass and Perennial Rye. Working on my lawn is one of my favorite projects - nothing makes me prouder than seeing those vibrant lawn stripes while I sit outside with family and friends to enjoy a nice BBQ. This project showcases attention to detail and dedication to quality results.",

@@ -1,15 +1,14 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import AnimatedSection from "../components/AnimatedSection"
 
-function awssite() {
+function awshealth() {
   return (
     <>
       <Seo
-        title="AWS Multi-Region Hosting Architecture - Cloud Infrastructure Project"
-        description="Explore John Xanthopoulos' AWS multi-region hosting solution featuring Terraform automation, CloudFront distribution, geo-load balancing, and automated failover capabilities."
+        title="AWS Health Notifications Architecture - Cloud Monitoring Project"
+        description="Explore John Xanthopoulos' AWS Health Event notification system featuring Terraform automation, EventBridge integration, Lambda processing, and multi-environment deployment capabilities."
       />
       <Layout>
         <div className="max-w-7xl mx-auto px-4 py-8">
@@ -38,22 +37,24 @@ function awssite() {
               {/* Header */}
               <div className="card-body">
                 <h1 className="card-title text-2xl sm:text-3xl lg:text-4xl font-bold text-center justify-center mb-6">
-                  AWS Multi-Region Hosted Site
+                  AWS Health Notifications Architecture
                 </h1>
 
                 {/* Architecture Diagram */}
-                <figure className="mb-8 flex justify-center">
-                  <StaticImage
-                    className="w-full max-w-4xl rounded-2xl shadow-2xl"
-                    src="../images/aws-site.png"
-                    alt="AWS Multi-Region Hosting Architecture Diagram"
-                  />
+                <figure className="mb-8">
+                  <div className="w-full overflow-x-auto">
+                    <img
+                      className="w-full max-w-none sm:max-w-full h-auto rounded-2xl shadow-2xl min-w-[800px] sm:min-w-0"
+                      src="/aws-architecture-official-icons.svg"
+                      alt="AWS Health Notifications Architecture Diagram"
+                    />
+                  </div>
                 </figure>
 
                 {/* Details Section */}
                 <div className="space-y-6">
                   <h2 className="text-xl sm:text-2xl font-bold text-center">
-                    Platform Design Details
+                    Architecture Design Details
                   </h2>
 
                   <ul className="space-y-4 text-sm sm:text-base lg:text-lg">
@@ -68,30 +69,47 @@ function awssite() {
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 flex-shrink-0">•</span>
                       <span>
-                        The primary site is hosted in US-East-1 with real-time
-                        data replication to the US-West-1 region.
+                        AWS Health Dashboard events are automatically captured
+                        and processed through EventBridge with custom event
+                        rules and patterns.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 flex-shrink-0">•</span>
                       <span>
-                        All web traffic is fronted by a geo-load balanced
-                        CloudFront distribution endpoint.
+                        Lambda function provides enhanced event formatting with
+                        emojis, rich notifications, and comprehensive error
+                        handling.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 flex-shrink-0">•</span>
                       <span>
-                        Traffic is automatically routed to the secondary West
-                        region should the primary East region fail for any
-                        reason.
+                        Multi-environment deployment supports both development
+                        and production environments with separate infrastructure
+                        stacks.
                       </span>
                     </li>
                     <li className="flex items-start gap-3">
                       <span className="text-primary mt-1 flex-shrink-0">•</span>
                       <span>
-                        DNS and TLS/SSL certificates are automatically managed
-                        by AWS Route53 and ACM.
+                        SNS topic distributes formatted notifications to
+                        multiple endpoints including email, SMS, and other
+                        subscriber types.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 flex-shrink-0">•</span>
+                      <span>
+                        Comprehensive monitoring and logging through CloudWatch
+                        with proper IAM roles and security policies.
+                      </span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-primary mt-1 flex-shrink-0">•</span>
+                      <span>
+                        Built using AWS SDK v3 with Node.js 20.x runtime for
+                        optimal performance and modern JavaScript features.
                       </span>
                     </li>
                   </ul>
@@ -105,4 +123,4 @@ function awssite() {
   )
 }
 
-export default awssite
+export default awshealth

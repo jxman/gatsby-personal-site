@@ -27,59 +27,68 @@ Accountable Technology Leader with more than 20 years of hands-on experience des
 
 ## PROFESSIONAL EXPERIENCE
 
-### **Vice President, Information Technology** | *April 2018 – Present*
+### **Vice President, Information Technology** | _April 2018 – Present_
+
 **Notified** | Boston, MA
 
 Oversee all aspects of DevOps, Cloud Engineering, Infrastructure, and Operations reporting directly to the CTO.
 
 **Key Responsibilities & Achievements:**
+
 - Led a global team of Directors and Site Reliability Engineers who build, test, secure, deploy, monitor, and operate systems for the Notified Digital Media division
 - Directly responsible for a portfolio of products providing virtual events to 11 million unique logins and over 16,000 webcasts annually, hosting over 3,000 Investor Relations sites (including 63% of Fortune 500 companies), and distributing over 230K press releases per year
 - Provided project leadership across all platform migrations and new product cloud infrastructure builds with budget oversight for all capital and operational expenditure, including a $7+ million/year cloud spend
 - Led digital transformation with the introduction of Infrastructure as Code and automation that reduced deployment times by 70% and improved overall system quality and reliability
 - Initiated programs to reduce overall cloud spend by over 25% leveraging AWS Cloud savings plans and architecture re-sizing
 
-### **Associate Vice President, Head of Web Operations** | *June 2013 – April 2018*
+### **Associate Vice President, Head of Web Operations** | _June 2013 – April 2018_
+
 **Nasdaq** | Boston, MA
 
 Led the Global Web Platforms Operations team supporting all web platforms across Nasdaq, reporting directly to the SVP Global Head of Operations.
 
 **Key Responsibilities & Achievements:**
+
 - Led a technology team of 42 globally based employees including 5 Directors
 - Presented to C-Suite executives on regular briefings around technical risk and operational review meetings
 - Partnered with business stakeholders and represented technology on numerous high-profile customer engagements, outreach calls, and RFP engagements
 - Developed and created the 24x7 globally based support model and team structure needed to meet demands and growth of the $400M IR and Corporate Solutions Web Platforms
 - Oversaw the migration of several key platforms from legacy data center hosting to next-generation AWS Cloud solutions
 
-### **Head of Corporate Services Application Support** | *September 2007 – June 2013*
+### **Head of Corporate Services Application Support** | _September 2007 – June 2013_
+
 **Thomson Reuters** | Boston, MA
 
 Led a global technology team responsible for a technology product portfolio of web platforms which generated over $350M in annual revenues.
 
 **Key Responsibilities & Achievements:**
+
 - Managed a globally based team of 18 including 2 Senior Managers
 - Responsible for the operational support, service, design, and delivery of an application infrastructure consisting of over 700 Microsoft, Sun, Linux, Oracle, and SQL-based systems
 - Collected and reported on key metrics with regular briefings to senior management
 
 **Notable Achievements:**
+
 - Successfully restructured team and implemented automation solutions reducing operating costs by over $300K while improving service support SLA by 15%
 - Designed and implemented a custom web-based support dashboard and process workflow changes which helped reduce MTTR by over 60%
 - Led the design and implementation of a $4M Data Center Migration and Disaster Recovery project, helping to protect $45M in annual revenue through improved hardware, software, and new Business Continuity and DR procedures
 
-### **Project Manager Server Engineering** | *1994 – 2007*
+### **Project Manager Server Engineering** | _1994 – 2007_
+
 **Putnam Investments** | Boston, MA
 
 **Key Responsibilities:**
+
 - Multi-platform server operations and engineering project manager for an environment of 1000+ servers running various versions of Windows, Solaris, and Linux
 - Oversaw a team of server engineers, supervised projects, managed escalation protocol, developed performance plans, and conducted employee reviews
 - Held various other positions throughout career progression at Putnam Investments
 
 ## EDUCATION
 
-**Master of Business Administration (MBA)** | *2007*  
+**Master of Business Administration (MBA)** | _2007_  
 University of Massachusetts, Boston, MA
 
-**Bachelor of Science in Management Information Systems** | *1994*  
+**Bachelor of Science in Management Information Systems** | _1994_  
 University of Massachusetts, Boston, MA
 
 ## CERTIFICATIONS

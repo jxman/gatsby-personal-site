@@ -5,16 +5,21 @@
  */
 
 // Load environment variables
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
   siteMetadata: {
-    title: process.env.GATSBY_SITE_TITLE || "John Xanthopoulos - IT Executive & Developer",
+    title:
+      process.env.GATSBY_SITE_TITLE ||
+      "John Xanthopoulos - IT Executive & Developer",
     titleTemplate: "%s | John Xanthopoulos",
-    description: process.env.GATSBY_SITE_DESCRIPTION || "IT Executive by day, developer on weekends. Sharing insights on software development, cloud architecture, and technology leadership. AWS, React, Terraform, and more.",
-    keywords: "John Xanthopoulos, IT Executive, Software Developer, AWS, React, Terraform, Cloud Architecture, Technology Leadership, Full Stack Developer, JavaScript, Web Development",
+    description:
+      process.env.GATSBY_SITE_DESCRIPTION ||
+      "IT Executive by day, developer on weekends. Sharing insights on software development, cloud architecture, and technology leadership. AWS, React, Terraform, and more.",
+    keywords:
+      "John Xanthopoulos, IT Executive, Software Developer, AWS, React, Terraform, Cloud Architecture, Technology Leadership, Full Stack Developer, JavaScript, Web Development",
     author: "John Xanthopoulos",
     url: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
     siteUrl: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
@@ -73,7 +78,10 @@ module.exports = {
           // Only load in production
           head: false,
           respectDNT: true,
-          exclude: process.env.NODE_ENV === 'development' ? ['/preview/**', '/do-not-track/me/too/'] : [],
+          exclude:
+            process.env.NODE_ENV === "development"
+              ? ["/preview/**", "/do-not-track/me/too/"]
+              : [],
         },
       },
     },

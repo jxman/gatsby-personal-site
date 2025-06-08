@@ -1,22 +1,35 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "john-xanthopoulos-portfolio",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
+  "description": "Personal portfolio website for John Xanthopoulos - showcasing AWS, React, Terraform, and modern cloud architecture projects",
+  "version": "2.0.0",
+  "license": "MIT",
+  "author": "John Xanthopoulos <contact@example.com>",
+  "homepage": "https://synepho.com",
+  "keywords": [
+    "portfolio",
+    "aws",
+    "terraform",
+    "react",
+    "gatsby",
+    "cloud-architecture",
+    "full-stack",
+    "serverless"
+  ],
   "scripts": {
-    "build": "gatsby clean && gatsby build",
-    "deploy": "aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=31536000 --exclude='*.html' && aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=0 --include='*.html'",
-    "build-and-deploy": "npm run build && npm run deploy",
-    "package": "zip -FSr -X build.zip ./public/",
-    "deploy-manual": "aws s3 sync ./public/ s3://www.synepho.com --delete",
-    "build-and-deploy-manual": "npm run build && npm run deploy-manual",
+    "dev": "gatsby develop",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
+    "build": "gatsby clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "deploy:prod": "aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=31536000 --exclude='*.html' && aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=0 --include='*.html'",
+    "deploy:simple": "aws s3 sync ./public/ s3://www.synepho.com --delete",
+    "build-and-deploy": "npm run build && npm run deploy:prod",
+    "package": "npm run build && zip -FSr -X build.zip ./public/",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths '/*'",
+    "deploy:full": "npm run build && npm run deploy:prod && npm run invalidate"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -50,9 +63,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/jxman/personal-site-new"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/jxman/personal-site-new/issues"
   }
 }

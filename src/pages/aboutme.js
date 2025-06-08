@@ -10,8 +10,8 @@ function AboutMe({ data }) {
 
   return (
     <>
-      <Seo 
-        title="About Me" 
+      <Seo
+        title="About Me"
         description="Learn about John Xanthopoulos - IT Executive and developer with expertise in cloud architecture, software development, and technology leadership."
       />
       <Layout>
@@ -32,7 +32,9 @@ function AboutMe({ data }) {
             {/* Content Section */}
             <div className="lg:col-span-3">
               <article className="prose prose-lg prose-blue max-w-none prose-headings:text-base-content prose-p:text-base-content/70 prose-li:text-base-content/70 prose-strong:text-base-content">
-                <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+                <div
+                  dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+                />
               </article>
             </div>
           </div>

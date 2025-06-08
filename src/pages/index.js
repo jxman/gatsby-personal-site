@@ -8,8 +8,8 @@ import AnimatedSection from "../components/AnimatedSection"
 const IndexPage = () => {
   return (
     <>
-      <Seo 
-        title="Home" 
+      <Seo
+        title="Home"
         description="John Xanthopoulos - IT Executive by day, developer on weekends. Sharing insights on AWS, React, Terraform, and technology leadership."
       />
       <Layout>
@@ -31,60 +31,104 @@ const IndexPage = () => {
                 />
               </div>
             </AnimatedSection>
-            
+
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-2xl">
               <AnimatedSection animation="fadeInLeft">
-                <h1 className="text-5xl lg:text-6xl font-bold text-base-content mb-6">
-                  John Xanthopoulos
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary font-medium rounded-full text-sm mb-4">
+                    Welcome to my digital space
+                  </span>
+                </div>
+                <h1 className="text-4xl lg:text-6xl font-bold text-base-content mb-6 leading-tight">
+                  Building Tomorrow's
+                  <span className="block text-primary">
+                    Technology Solutions
+                  </span>
                 </h1>
               </AnimatedSection>
-              
+
               <AnimatedSection animation="fadeInLeft" delay={100}>
-                <div className="text-2xl lg:text-3xl text-base-content/80 mb-6 space-y-2">
-                  <p className="font-medium">IT Executive by Day</p>
-                  <p className="text-primary font-semibold">Developer on the Weekend</p>
+                <div className="text-xl lg:text-2xl text-base-content/80 mb-6 space-y-1">
+                  <p className="font-medium">
+                    IT Executive by Day • Developer on Weekends
+                  </p>
+                  <p className="text-base-content/60 text-lg">
+                    20+ years architecting the future of technology
+                  </p>
                 </div>
               </AnimatedSection>
-              
+
               <AnimatedSection animation="fadeInLeft" delay={200}>
                 <p className="text-lg text-base-content/70 mb-8 leading-relaxed">
-                  Passionate technology leader with 20+ years of experience driving digital transformation, 
-                  building high-performing teams, and architecting cloud-native solutions. When I'm not leading 
-                  strategic initiatives, you'll find me coding personal projects and exploring the latest technologies.
+                  Passionate technology leader with 20+ years of experience
+                  driving digital transformation, building high-performing
+                  teams, and architecting cloud-native solutions. When I'm not
+                  leading strategic initiatives, you'll find me coding personal
+                  projects and exploring the latest technologies.
                 </p>
               </AnimatedSection>
-              
+
               {/* CTA Buttons */}
               <AnimatedSection animation="fadeInUp" delay={300}>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link 
-                    to="/aboutme" 
+                  <Link
+                    to="/aboutme"
                     className="btn btn-primary btn-lg hover:scale-105 transition-transform duration-200"
                     aria-label="Learn more about John's background and experience"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    <svg
+                      className="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                      />
                     </svg>
                     About Me
                   </Link>
-                  <Link 
-                    to="/projects" 
+                  <Link
+                    to="/projects"
                     className="btn btn-outline btn-lg hover:scale-105 transition-transform duration-200"
                     aria-label="View John's portfolio of projects"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    <svg
+                      className="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                      />
                     </svg>
                     View Projects
                   </Link>
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="btn btn-outline btn-secondary btn-lg hover:scale-105 transition-transform duration-200"
                     aria-label="Get in touch with John"
                   >
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg
+                      className="w-5 h-5 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
                     </svg>
                     Contact
                   </Link>
@@ -98,12 +142,15 @@ const IndexPage = () => {
         <AnimatedSection animation="fadeInUp" className="py-16 bg-base-100">
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-base-content mb-4">Experience Highlights</h2>
+              <h2 className="text-3xl font-bold text-base-content mb-4">
+                Experience Highlights
+              </h2>
               <p className="text-base-content/70 max-w-2xl mx-auto">
-                Two decades of technology leadership driving innovation and results
+                Two decades of technology leadership driving innovation and
+                results
               </p>
             </AnimatedSection>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <AnimatedSection animation="scaleIn" delay={100}>
                 <div className="stat bg-base-200 rounded-lg p-6 text-center hover:shadow-lg transition-shadow duration-300">
@@ -138,13 +185,20 @@ const IndexPage = () => {
         </AnimatedSection>
 
         {/* Skills & Technologies */}
-        <AnimatedSection animation="fadeInUp" className="py-16 bg-gradient-to-br from-base-200 to-base-100">
+        <AnimatedSection
+          animation="fadeInUp"
+          className="py-16 bg-gradient-to-br from-base-200 to-base-100"
+        >
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-base-content mb-4">Core Technologies</h2>
-              <p className="text-base-content/70">Modern tools and platforms I work with regularly</p>
+              <h2 className="text-3xl font-bold text-base-content mb-4">
+                Core Technologies
+              </h2>
+              <p className="text-base-content/70">
+                Modern tools and platforms I work with regularly
+              </p>
             </AnimatedSection>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {[
                 { name: "AWS", icon: "☁️" },
@@ -152,12 +206,20 @@ const IndexPage = () => {
                 { name: "Node.js", icon: "🟢" },
                 { name: "Terraform", icon: "🏗️" },
                 { name: "Docker", icon: "🐳" },
-                { name: "Kubernetes", icon: "⚓" }
+                { name: "Kubernetes", icon: "⚓" },
               ].map((tech, index) => (
-                <AnimatedSection key={index} animation="slideInUp" delay={index * 100}>
+                <AnimatedSection
+                  key={index}
+                  animation="slideInUp"
+                  delay={index * 100}
+                >
                   <div className="text-center p-4 bg-base-100 rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-300">
-                    <div className="text-3xl mb-2 animate-pulse">{tech.icon}</div>
-                    <div className="font-semibold text-base-content/90">{tech.name}</div>
+                    <div className="text-3xl mb-2 animate-pulse">
+                      {tech.icon}
+                    </div>
+                    <div className="font-semibold text-base-content/90">
+                      {tech.name}
+                    </div>
                   </div>
                 </AnimatedSection>
               ))}
@@ -169,55 +231,71 @@ const IndexPage = () => {
         <AnimatedSection animation="fadeInUp" className="py-16 bg-base-100">
           <div className="max-w-6xl mx-auto px-4">
             <AnimatedSection animation="fadeInUp" className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-base-content mb-4">Latest Blog Post</h2>
+              <h2 className="text-3xl font-bold text-base-content mb-4">
+                Latest Blog Post
+              </h2>
               <p className="text-base-content/70 max-w-2xl mx-auto">
                 Recent insights on technology, leadership, and development
               </p>
             </AnimatedSection>
-            
+
             <AnimatedSection animation="scaleIn" delay={200}>
               <div className="max-w-4xl mx-auto">
                 <div className="card bg-gradient-to-br from-primary/5 to-secondary/5 shadow-xl hover:shadow-2xl transition-shadow duration-300 border border-primary/10">
                   <div className="card-body">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="badge badge-primary">New</div>
-                      <div className="badge badge-outline">AI Development</div>
+                      <div className="badge badge-outline">Lawn Care App</div>
+                      <div className="badge badge-accent">AI Development</div>
                     </div>
-                    
+
                     <h3 className="card-title text-2xl mb-4">
-                      <Link 
-                        to="/blog/ai-pair-programming-journey" 
+                      <Link
+                        to="/blog/lawnsmartapp-release"
                         className="hover:text-primary transition-colors"
                       >
-                        From Coding Challenges to Real-World Solutions: My Journey with AI Pair Programming
+                        From Weekend Lawn Care to Zone-Intelligent App:
+                        Releasing Lawn.Smart
                       </Link>
                     </h3>
-                    
+
                     <p className="text-base-content/70 mb-6 leading-relaxed">
-                      Exploring how AI pair programming tools like Claude Code and GitHub Copilot have transformed 
-                      my development workflow, from solving complex coding challenges to building production applications. 
-                      A practical perspective on the evolution of developer tooling and productivity.
+                      How my passion for lawn care and AI-powered development
+                      led to creating a comprehensive USDA zone-customized lawn
+                      management application. From "vibe coding" with Claude to
+                      launching at lawnsmartapp.com — the story of building
+                      something genuinely useful.
                     </p>
-                    
+
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-4 text-sm text-base-content/60">
-                        <span>Published: December 16, 2024</span>
+                        <span>Published: January 7, 2025</span>
                         <span className="hidden sm:inline">•</span>
-                        <span>5 min read</span>
+                        <span>6 min read</span>
                       </div>
-                      
+
                       <div className="flex gap-3">
-                        <Link 
-                          to="/blog/ai-pair-programming-journey" 
+                        <Link
+                          to="/blog/lawnsmartapp-release"
                           className="btn btn-primary hover:scale-105 transition-transform duration-200"
                         >
                           Read More
-                          <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M13 7l5 5m0 0l-5 5m5-5H6"
+                            />
                           </svg>
                         </Link>
-                        <Link 
-                          to="/blog" 
+                        <Link
+                          to="/blog"
                           className="btn btn-outline btn-secondary hover:scale-105 transition-transform duration-200"
                         >
                           View All Posts

@@ -3,6 +3,7 @@
 ## CloudFront Distribution Setup
 
 ### Distribution Details
+
 - **Distribution ID**: E2UW9JLSX34HRT
 - **Domain**: d1kxqxxd0yzw7y.cloudfront.net
 - **Origin**: www.synepho.com-secondary.s3.us-west-1.amazonaws.com
@@ -13,17 +14,19 @@
 **Policy Name**: security-headers-synepho-com
 
 #### Content Security Policy (CSP)
+
 ```
-default-src 'self'; 
-img-src 'self' data: blob:; 
-script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; 
-style-src 'self' 'unsafe-inline' data:; 
-font-src 'self' data:; 
-connect-src 'self' https://www.google-analytics.com https://analytics.google.com; 
+default-src 'self';
+img-src 'self' data: blob:;
+script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com;
+style-src 'self' 'unsafe-inline' data:;
+font-src 'self' data:;
+connect-src 'self' https://www.google-analytics.com https://analytics.google.com;
 frame-src 'self';
 ```
 
 **CSP Explanation:**
+
 - `default-src 'self'` - Only allow resources from same origin by default
 - `img-src 'self' data: blob:` - Allow images from same origin, data URLs, and blob URLs (needed for Gatsby image processing)
 - `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com` - Allow same origin scripts, inline scripts, eval(), and Google Tag Manager
@@ -33,6 +36,7 @@ frame-src 'self';
 - `frame-src 'self'` - Only allow frames from same origin
 
 #### Other Security Headers
+
 - **X-XSS-Protection**: 1; mode=block
 - **X-Frame-Options**: DENY
 - **X-Content-Type-Options**: nosniff
@@ -45,6 +49,7 @@ frame-src 'self';
 **Region**: us-east-1 (inferred from deployment script)
 
 #### Deployment Configuration
+
 The site is deployed using AWS CLI with the following settings:
 
 ```bash
@@ -57,12 +62,14 @@ aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=0 --
 ```
 
 **Cache Control Strategy:**
+
 - Static assets (JS, CSS, images): 1 year cache (`max-age=31536000`)
 - HTML files: No cache (`max-age=0`) for immediate updates
 
 ## Recent Changes (June 6, 2025)
 
 ### Issue: CSP Blocking Gatsby Resources
+
 **Problem**: Restrictive CSP headers were blocking Gatsby's inline scripts, Google Analytics, and embedded fonts/images.
 
 **Solution**: Updated CloudFront response headers policy to allow necessary Gatsby resources while maintaining security.
@@ -85,6 +92,7 @@ aws cloudfront create-invalidation --distribution-id E2UW9JLSX34HRT --paths "/*"
 **Updated configurations for S3/CloudFront compatibility:**
 
 #### gatsby-config.js
+
 ```javascript
 {
   resolve: `gatsby-plugin-sharp`,
@@ -101,6 +109,7 @@ aws cloudfront create-invalidation --distribution-id E2UW9JLSX34HRT --paths "/*"
 ```
 
 #### StaticImage Component
+
 ```javascript
 <StaticImage
   src="../images/me2.jpeg"
@@ -123,11 +132,13 @@ aws cloudfront create-invalidation --distribution-id E2UW9JLSX34HRT --paths "/*"
 ## Troubleshooting
 
 ### Common Issues
+
 1. **Blank images**: Usually CSP blocking or incorrect image paths
 2. **Console errors**: Check CSP policy allows required resources
 3. **Slow loading**: Verify cache headers are properly set
 
 ### Useful Commands
+
 ```bash
 # Check distribution status
 aws cloudfront get-distribution --id E2UW9JLSX34HRT

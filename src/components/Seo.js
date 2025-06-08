@@ -30,7 +30,11 @@ const SEO = ({ title, description, image, article }) => {
   }
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate} htmlAttributes={{ lang }}>
+    <Helmet
+      title={seo.title}
+      titleTemplate={titleTemplate}
+      htmlAttributes={{ lang }}
+    >
       <meta name="description" content={seo.description} />
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
@@ -40,7 +44,7 @@ const SEO = ({ title, description, image, article }) => {
       <meta name="googlebot" content="index, follow" />
       <meta name="format-detection" content="telephone=no" />
       <link rel="canonical" href={seo.url} />
-      
+
       {/* Favicon and app icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -85,44 +89,44 @@ const SEO = ({ title, description, image, article }) => {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Person",
-          "name": "John Xanthopoulos",
-          "jobTitle": "IT Executive",
-          "description": seo.description,
-          "url": seo.url,
-          "image": seo.image,
-          "email": "mailto:john@synepho.com",
-          "sameAs": [
+          name: "John Xanthopoulos",
+          jobTitle: "IT Executive",
+          description: seo.description,
+          url: seo.url,
+          image: seo.image,
+          email: "mailto:john@synepho.com",
+          sameAs: [
             `https://www.linkedin.com/in/${linkedinUsername}/`,
             `https://github.com/${githubUsername}`,
-            `https://twitter.com/${twitterUsername.replace('@', '')}`
+            `https://twitter.com/${twitterUsername.replace("@", "")}`,
           ],
-          "knowsAbout": [
-            "Software Development", 
-            "IT Management", 
-            "AWS", 
-            "Terraform", 
-            "React", 
+          knowsAbout: [
+            "Software Development",
+            "IT Management",
+            "AWS",
+            "Terraform",
+            "React",
             "Cloud Architecture",
             "JavaScript",
             "Web Development",
-            "Technology Leadership"
+            "Technology Leadership",
           ],
-          "alumniOf": {
+          alumniOf: {
             "@type": "Organization",
-            "name": "University of Massachusetts"
+            name: "University of Massachusetts",
           },
-          "worksFor": {
+          worksFor: {
             "@type": "Organization",
-            "name": "Technology Company"
+            name: "Technology Company",
           },
-          "hasOccupation": {
+          hasOccupation: {
             "@type": "Occupation",
-            "name": "IT Executive",
-            "occupationLocation": {
+            name: "IT Executive",
+            occupationLocation: {
               "@type": "Country",
-              "name": "United States"
-            }
-          }
+              name: "United States",
+            },
+          },
         })}
       </script>
     </Helmet>

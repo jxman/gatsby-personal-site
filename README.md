@@ -13,6 +13,7 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 ## 🆕 Recent Updates
 
 **Latest Improvements (December 2024):**
+
 - ✅ **Security Enhancement**: Fixed external link vulnerabilities with proper `rel` attributes
 - ✅ **Performance Boost**: Upgraded to StaticImage for 50-70% faster image loading
 - ✅ **SEO Optimization**: Added structured data (JSON-LD) for better search visibility
@@ -35,16 +36,16 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ## 🛠 Tech Stack
 
-| Technology | Purpose |
-|------------|---------|
-| [Gatsby.js](https://www.gatsbyjs.com/) | Static site generator (v5.14.0) |
-| [React](https://reactjs.org/) | UI framework (v18.3.1) |
-| [Tailwind CSS](https://tailwindcss.com/) | Utility-first CSS framework (v3.4.17) |
-| [DaisyUI](https://daisyui.com/) | Tailwind CSS components (v4.12.24) |
-| [Headless UI](https://headlessui.dev/) | Accessible UI components |
-| [AWS S3](https://aws.amazon.com/s3/) | Static website hosting |
-| [AWS CloudFront](https://aws.amazon.com/cloudfront/) | Global CDN |
-| [AWS CLI](https://aws.amazon.com/cli/) | Direct deployment tooling |
+| Technology                                           | Purpose                               |
+| ---------------------------------------------------- | ------------------------------------- |
+| [Gatsby.js](https://www.gatsbyjs.com/)               | Static site generator (v5.14.0)       |
+| [React](https://reactjs.org/)                        | UI framework (v18.3.1)                |
+| [Tailwind CSS](https://tailwindcss.com/)             | Utility-first CSS framework (v3.4.17) |
+| [DaisyUI](https://daisyui.com/)                      | Tailwind CSS components (v4.12.24)    |
+| [Headless UI](https://headlessui.dev/)               | Accessible UI components              |
+| [AWS S3](https://aws.amazon.com/s3/)                 | Static website hosting                |
+| [AWS CloudFront](https://aws.amazon.com/cloudfront/) | Global CDN                            |
+| [AWS CLI](https://aws.amazon.com/cli/)               | Direct deployment tooling             |
 
 ## 📁 Project Structure
 
@@ -88,45 +89,49 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/jxman/personal-site-new.git
    cd personal-site-new
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp .env.example .env
    # Edit .env with your values (see Environment Configuration section)
    ```
 
 4. **Start development server**
+
    ```bash
    npm run develop
    ```
 
 5. **Open in browser**
    - Site: [http://localhost:8000](http://localhost:8000)
-   - GraphQL: [http://localhost:8000/___graphql](http://localhost:8000/___graphql)
+   - GraphQL: [http://localhost:8000/\_\_\_graphql](http://localhost:8000/___graphql)
 
 ### Available Scripts
 
-| Script | Purpose |
-|--------|---------|
-| `npm run develop` | Start development server |
-| `npm run build` | Build for production |
-| `npm run serve` | Preview production build |
-| `npm run clean` | Clean Gatsby cache |
-| `npm run format` | Format code with Prettier |
-| `npm run deploy` | Deploy to S3 using AWS CLI |
-| `npm run build-and-deploy` | Build and deploy to S3 |
-| `npm run package` | Create deployment zip file |
-| `npm run lint` | Run ESLint code quality checks |
-| `npm run format` | Format code with Prettier |
+| Script                     | Purpose                        |
+| -------------------------- | ------------------------------ |
+| `npm run develop`          | Start development server       |
+| `npm run build`            | Build for production           |
+| `npm run serve`            | Preview production build       |
+| `npm run clean`            | Clean Gatsby cache             |
+| `npm run format`           | Format code with Prettier      |
+| `npm run deploy`           | Deploy to S3 using AWS CLI     |
+| `npm run build-and-deploy` | Build and deploy to S3         |
+| `npm run package`          | Create deployment zip file     |
+| `npm run lint`             | Run ESLint code quality checks |
+| `npm run format`           | Format code with Prettier      |
 
 ## 🌩 AWS Deployment
 
@@ -143,13 +148,15 @@ Users → CloudFront CDN → S3 Static Website Hosting
 ### Deployment Method
 
 **Secure AWS CLI Deployment:**
+
 ```bash
 npm run build-and-deploy
 ```
 
 This approach:
+
 - ✅ Uses direct AWS API calls
-- ✅ Eliminates vulnerable plugin dependencies  
+- ✅ Eliminates vulnerable plugin dependencies
 - ✅ Provides better error handling
 - ✅ Offers more predictable behavior
 - ✅ Maintains full deployment control
@@ -164,18 +171,19 @@ This approach:
 4. **Block Public ACLs**: Enabled (security best practice)
 
 **Bucket Policy:**
+
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "PublicReadGetObject",
-            "Effect": "Allow",
-            "Principal": "*",
-            "Action": "s3:GetObject",
-            "Resource": "arn:aws:s3:::www.synepho.com/*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::www.synepho.com/*"
+    }
+  ]
 }
 ```
 
@@ -190,22 +198,22 @@ This approach:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:GetObject",
-                "s3:DeleteObject",
-                "s3:ListBucket"
-            ],
-            "Resource": [
-                "arn:aws:s3:::www.synepho.com",
-                "arn:aws:s3:::www.synepho.com/*"
-            ]
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::www.synepho.com",
+        "arn:aws:s3:::www.synepho.com/*"
+      ]
+    }
+  ]
 }
 ```
 
@@ -216,6 +224,7 @@ This approach:
 The project uses environment-specific configuration:
 
 **`.env.development`** (committed - safe values):
+
 ```env
 GATSBY_SITE_URL=http://localhost:8000
 GATSBY_GOOGLE_ANALYTICS_ID=G-2HLT4VSZHW
@@ -225,6 +234,7 @@ AWS_S3_BUCKET=www.synepho.com
 ```
 
 **`.env.production`** (not committed - real values):
+
 ```env
 GATSBY_SITE_URL=https://synepho.com
 GATSBY_GOOGLE_ANALYTICS_ID=G-2HLT4VSZHW
@@ -252,6 +262,7 @@ AWS_S3_BUCKET=www.synepho.com
 ### Updating Projects
 
 Edit `src/content/projects.json`:
+
 ```json
 {
   "id": 1,
@@ -281,18 +292,21 @@ Edit `src/content/projects.json`:
 This project includes comprehensive git configuration for consistency and best practices:
 
 #### `.gitignore`
+
 - **Optimized patterns**: Covers Node.js, Gatsby, AWS, and development tools
 - **Security focused**: Excludes environment files and secrets
 - **Performance oriented**: Ignores cache and build directories
 - **Cross-platform**: Handles Windows, macOS, and Linux artifacts
 
 #### `.gitattributes`
+
 - **Line ending normalization**: Ensures LF endings for source files
 - **Binary file handling**: Proper handling of images and media
 - **Language detection**: Optimized for GitHub language statistics
 - **Merge strategies**: Better diff handling for generated files
 
 #### `.editorconfig`
+
 - **Consistent formatting**: 2-space indentation, UTF-8 encoding
 - **Cross-editor support**: Works with VS Code, Sublime, Vim, etc.
 - **File-specific rules**: Different settings for various file types
@@ -328,18 +342,21 @@ This project prioritizes security through:
 ### Security Improvements Made
 
 **Recent Security Enhancements (Latest Update):**
+
 - ✅ **Fixed External Link Vulnerability**: Added `rel="noopener noreferrer"` to prevent reverse tabnabbing
 - ✅ **Contact Form Security**: Implemented Netlify Forms with built-in spam protection
 - ✅ **Component Security**: Fixed React className/class inconsistencies
 - ✅ **Accessibility Security**: Added proper ARIA labels for screen readers
 
 **Previously Removed gatsby-plugin-s3** due to:
+
 - 34+ security vulnerabilities in dependencies
 - Outdated HTTP proxy libraries
 - Complex dependency chains with known CVEs
 - Maintenance concerns
 
 **Implemented Direct AWS CLI** providing:
+
 - ✅ Zero vulnerable dependencies
 - ✅ Direct AWS API usage
 - ✅ Better error handling
@@ -363,6 +380,7 @@ This project prioritizes security through:
 **Problem**: AWS CLI deployment fails
 
 **Solutions**:
+
 ```bash
 # Check AWS CLI configuration
 aws sts get-caller-identity
@@ -379,6 +397,7 @@ aws s3 sync ./public/ s3://www.synepho.com --delete --dryrun
 **Problem**: Variables not available in gatsby-config.js
 
 **Solutions**:
+
 ```bash
 # Check file exists
 ls -la .env.development
@@ -395,6 +414,7 @@ npm run clean && npm run develop
 **Problem**: Gatsby build fails
 
 **Solutions**:
+
 ```bash
 # Clean cache and rebuild
 npm run clean
@@ -409,11 +429,13 @@ npm install
 
 **Problem**: Development server shows blank page or missing bundles
 
-**Symptoms**: 
+**Symptoms**:
+
 - Browser console shows 404 errors for `commons.js`, `commons.css`, `framework.js`
 - Page appears blank despite server running
 
 **Solutions**:
+
 ```bash
 # 1. Clean all cache and restart
 npm run clean
@@ -481,6 +503,7 @@ Edit `src/content/projects.json` and add corresponding images to `src/images/` f
 ### Contact Form
 
 The contact form is configured for Netlify Forms. When deployed to Netlify:
+
 1. Forms are automatically detected and configured
 2. Submissions are sent to your Netlify dashboard
 3. Email notifications can be configured in Netlify settings
@@ -520,7 +543,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: npm install
       - run: npm run build
       - name: Deploy to S3
@@ -565,17 +588,17 @@ chore(deps): update dependencies to latest versions
 
 #### Commit Types
 
-| Type | Purpose |
-|------|---------|
-| `feat` | New feature |
-| `fix` | Bug fix |
-| `docs` | Documentation only |
-| `style` | Code style changes (formatting, etc.) |
+| Type       | Purpose                                  |
+| ---------- | ---------------------------------------- |
+| `feat`     | New feature                              |
+| `fix`      | Bug fix                                  |
+| `docs`     | Documentation only                       |
+| `style`    | Code style changes (formatting, etc.)    |
 | `refactor` | Code refactoring without feature changes |
-| `test` | Adding or updating tests |
-| `chore` | Maintenance tasks (deps, build, etc.) |
-| `perf` | Performance improvements |
-| `ci` | CI/CD pipeline changes |
+| `test`     | Adding or updating tests                 |
+| `chore`    | Maintenance tasks (deps, build, etc.)    |
+| `perf`     | Performance improvements                 |
+| `ci`       | CI/CD pipeline changes                   |
 
 ### Development Workflow
 
@@ -727,39 +750,50 @@ secrets:
 Use these templates:
 
 **Bug Report:**
+
 ```markdown
 ## Bug Description
+
 Brief description of the issue
 
 ## Steps to Reproduce
+
 1. Step one
 2. Step two
 3. Step three
 
 ## Expected Behavior
+
 What should happen
 
 ## Actual Behavior
+
 What actually happens
 
 ## Environment
+
 - OS: [e.g., macOS 12.0]
 - Browser: [e.g., Chrome 95]
 - Node.js: [e.g., 18.x]
 ```
 
 **Feature Request:**
+
 ```markdown
 ## Feature Description
+
 Brief description of the proposed feature
 
 ## Use Case
+
 Why is this feature needed?
 
 ## Proposed Solution
+
 How should this feature work?
 
 ## Additional Context
+
 Any other relevant information
 ```
 
