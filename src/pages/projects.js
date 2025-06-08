@@ -90,8 +90,10 @@ function Projects({ data }) {
                           <a
                             href={project.demo_link}
                             className="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            {...(project.demo_link.startsWith('http') ? {
+                              target: "_blank",
+                              rel: "noopener noreferrer"
+                            } : {})}
                             aria-label={`View live demo of ${project.name}`}
                           >
                             <svg

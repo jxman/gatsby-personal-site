@@ -12,15 +12,15 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ## 🆕 Recent Updates
 
-**Latest Improvements (December 2024):**
+**Latest Improvements (January 2025):**
 
-- ✅ **Security Enhancement**: Fixed external link vulnerabilities with proper `rel` attributes
-- ✅ **Performance Boost**: Upgraded to StaticImage for 50-70% faster image loading
-- ✅ **SEO Optimization**: Added structured data (JSON-LD) for better search visibility
-- ✅ **Accessibility**: Improved ARIA labels and screen reader support
-- ✅ **Functional Contact Form**: Integrated Netlify Forms with spam protection
-- ✅ **Code Quality**: Fixed React errors and improved component naming conventions
-- ✅ **Developer Experience**: Added comprehensive `.env.example` with documentation
+- ✅ **AWS Health Project Enhancement**: Added detailed architecture diagram with professional SVG visualization
+- ✅ **Responsive Design Overhaul**: Implemented mobile-first responsive design across all AWS project pages
+- ✅ **SVG Image Support**: Enhanced projects component to handle both raster and vector images seamlessly
+- ✅ **Dedicated Project Pages**: Created immersive demo pages for AWS Health, Multi-region Site, and RSS Status projects
+- ✅ **Package.json Optimization**: Updated metadata, improved npm scripts, and enhanced deployment pipeline
+- ✅ **Code Quality**: Applied Prettier formatting across entire codebase for consistent style
+- ✅ **Architecture Documentation**: Added comprehensive technical details and system diagrams
 
 ## ✨ Features
 
@@ -55,19 +55,26 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 │   │   ├── Layout.js       # Main layout wrapper
 │   │   ├── Navbar.js       # Navigation component
 │   │   ├── Footer.js       # Footer component
-│   │   └── Seo.js          # SEO meta tags component
+│   │   ├── Seo.js          # SEO meta tags component
+│   │   ├── AnimatedSection.js # Animation wrapper component
+│   │   └── ScrollToTop.js  # Scroll to top functionality
 │   ├── pages/              # Route pages
 │   │   ├── index.js        # Homepage
 │   │   ├── aboutme.js      # About page
 │   │   ├── projects.js     # Projects showcase
+│   │   ├── awshealth.js    # AWS Health project demo
+│   │   ├── awssite.js      # AWS Multi-region site demo
+│   │   ├── awsrss.js       # AWS RSS status check demo
 │   │   ├── resume.js       # Resume page
-│   │   └── contact.js      # Contact page
+│   │   ├── contact.js      # Contact page
+│   │   ├── lawn.js         # Lawn project showcase
+│   │   └── blog/           # Blog posts directory
 │   ├── content/            # JSON data files
 │   │   └── projects.json   # Projects data
 │   ├── markdown-pages/     # Markdown content
 │   │   ├── about.md        # About page content
 │   │   └── resume.md       # Resume content
-│   ├── images/             # Source images
+│   ├── images/             # Source images (processed by Gatsby)
 │   └── styles/             # Global styles
 ├── static/                 # Static assets (copied to public)
 ├── .env.example            # Environment variables template
@@ -120,18 +127,21 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ### Available Scripts
 
-| Script                     | Purpose                        |
-| -------------------------- | ------------------------------ |
-| `npm run develop`          | Start development server       |
-| `npm run build`            | Build for production           |
-| `npm run serve`            | Preview production build       |
-| `npm run clean`            | Clean Gatsby cache             |
-| `npm run format`           | Format code with Prettier      |
-| `npm run deploy`           | Deploy to S3 using AWS CLI     |
-| `npm run build-and-deploy` | Build and deploy to S3         |
-| `npm run package`          | Create deployment zip file     |
-| `npm run lint`             | Run ESLint code quality checks |
-| `npm run format`           | Format code with Prettier      |
+| Script                     | Purpose                                    |
+| -------------------------- | ------------------------------------------ |
+| `npm run dev`              | Start development server (alias)          |
+| `npm run develop`          | Start development server                   |
+| `npm run build`            | Build for production                       |
+| `npm run serve`            | Preview production build                   |
+| `npm run clean`            | Clean Gatsby cache                         |
+| `npm run format`           | Format code with Prettier                  |
+| `npm run format:check`     | Check code formatting without changes      |
+| `npm run deploy:prod`      | Deploy to S3 with optimized cache headers |
+| `npm run deploy:simple`    | Simple S3 sync without cache optimization |
+| `npm run build-and-deploy` | Build and deploy to S3 (production)       |
+| `npm run package`          | Build and create deployment zip file       |
+| `npm run invalidate`       | Invalidate CloudFront cache                |
+| `npm run deploy:full`      | Complete deployment pipeline               |
 
 ## 🌩 AWS Deployment
 
@@ -251,6 +261,46 @@ AWS_S3_BUCKET=www.synepho.com
 - **Security**: Production secrets not committed to git
 - **Team Ready**: Easy onboarding with `.env.example`
 
+## 🏗️ Project Enhancements
+
+### AWS Project Pages
+
+This portfolio features dedicated demo pages for AWS projects with professional architecture diagrams and detailed technical explanations:
+
+#### AWS Health Notifications (`/awshealth/`)
+- **Architecture Diagram**: Professional SVG showing EventBridge, Lambda, SNS integration
+- **Technical Details**: Terraform automation, multi-environment deployment, enhanced notifications
+- **Responsive Design**: Mobile-optimized with horizontal scrolling for large diagrams
+
+#### AWS Multi-Region Site (`/awssite/`)
+- **Infrastructure Overview**: CloudFront, S3, multi-region setup visualization
+- **Platform Details**: Automated failover, geo-load balancing, TLS management
+- **Performance Focus**: Optimized images and responsive layout
+
+#### AWS RSS Status Check (`/awsrss/`)
+- **System Architecture**: Lambda + DynamoDB + Serverless Framework
+- **Monitoring Features**: Real-time alerts, webhook notifications, state management
+- **Future Roadmap**: React frontend development plans
+
+### SVG Image Support
+
+Enhanced the projects component to handle both raster and vector images seamlessly:
+
+```javascript
+// Automatic detection and rendering
+{project.image.childImageSharp ? (
+  <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} />
+) : (
+  <img src={project.image.publicURL} />
+)}
+```
+
+**Benefits:**
+- ✅ Raster images (PNG/JPG) get full Gatsby optimization
+- ✅ SVG files render directly with crisp vector graphics
+- ✅ Fallback handling prevents errors
+- ✅ GraphQL integration for both types
+
 ## 🎨 Customization
 
 ### Adding New Pages
@@ -276,8 +326,17 @@ Edit `src/content/projects.json`:
 
 ### Adding Images
 
-1. **Static images**: Place in `static/` for direct access (recommended for hero images)
-2. **Processed images**: Place in `src/images/` and use `StaticImage` for optimization
+1. **Static images**: Place in `static/` for direct URL access (e.g., SVG diagrams, favicons)
+2. **Processed images**: Place in `src/images/` and use `StaticImage` for optimization (PNG, JPG, WebP)
+3. **SVG support**: SVG files work in both locations - `src/images/` for GraphQL integration or `static/` for direct access
+
+**Example for projects:**
+```json
+{
+  "image": "../images/project-screenshot.png",  // Processed by Gatsby
+  "demo_link": "/architecture-diagram.svg"     // Direct static access
+}
+```
 
 ### Styling
 
