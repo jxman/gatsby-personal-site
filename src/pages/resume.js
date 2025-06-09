@@ -99,6 +99,17 @@ function Resume({ data }) {
             </div>
           </div>
 
+          {/* Notice Banner */}
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 rounded-r-lg print:hidden">
+            <div className="flex">
+              <div className="ml-3">
+                <p className="text-sm text-blue-700">
+                  <strong>Note:</strong> This resume version is not current. An updated CV reflecting recent projects and accomplishments is currently in progress.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Resume Content */}
           <div className="bg-white shadow-sm border rounded-lg p-8 print:shadow-none print:border-none print:p-0">
             <article

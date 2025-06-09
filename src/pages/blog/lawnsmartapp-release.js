@@ -361,7 +361,7 @@ const LawnSmartAppReleasePost = () => {
               >
                 lawnsmartapp.com
               </a>
-              was the culmination of weeks of AI-assisted development, testing,
+              {" "}was the culmination of weeks of AI-assisted development, testing,
               and refinement. The deployment pipeline includes:
             </p>
 
@@ -419,7 +419,7 @@ const LawnSmartAppReleasePost = () => {
             <h2>Try It Yourself</h2>
 
             <p>
-              Ready to take your lawn care to the next level? Head over to
+              Ready to take your lawn care to the next level? Head over to{" "}
               <a
                 href="https://www.lawnsmartapp.com"
                 target="_blank"
@@ -427,7 +427,7 @@ const LawnSmartAppReleasePost = () => {
               >
                 lawnsmartapp.com
               </a>
-              and give Lawn.Smart a try. Whether you're dealing with cool-season
+              {" "}and give Lawn.Smart a try. Whether you're dealing with cool-season
               grasses in Minnesota or warm-season varieties in Arizona, the app
               will provide zone-specific guidance tailored to your local growing
               conditions.

@@ -17,9 +17,9 @@
     "serverless"
   ],
   "scripts": {
-    "dev": "gatsby develop",
-    "develop": "gatsby develop",
-    "build": "gatsby clean && gatsby build",
+    "dev": "WEBPACK_CACHE_SERIALIZE_STRATEGY=none GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby develop",
+    "develop": "WEBPACK_CACHE_SERIALIZE_STRATEGY=none GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby develop",
+    "build": "gatsby clean && WEBPACK_CACHE_SERIALIZE_STRATEGY=none gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",

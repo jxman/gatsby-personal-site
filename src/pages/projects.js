@@ -10,9 +10,6 @@ function Projects({ data }) {
     allProjectsJson: { nodes: projectslist },
   } = data
 
-  // Debug logging
-  console.log("Data received:", data)
-  console.log("Projects list:", projectslist)
 
   return (
     <>
@@ -47,17 +44,17 @@ function Projects({ data }) {
                     <figure className="lg:w-1/2">
                       <div className="mockup-window border bg-base-300">
                         <div className="flex justify-center px-4 py-16 bg-base-200">
-                          {project.image.childImageSharp ? (
-                            <GatsbyImage
-                              image={
-                                project.image.childImageSharp.gatsbyImageData
-                              }
+                          {project.image.extension === 'svg' || !project.image.childImageSharp ? (
+                            <img
+                              src={project.image.publicURL}
                               alt={`Screenshot of ${project.name} project`}
                               className="max-w-full h-auto"
                             />
                           ) : (
-                            <img
-                              src={project.image.publicURL}
+                            <GatsbyImage
+                              image={
+                                project.image.childImageSharp.gatsbyImageData
+                              }
                               alt={`Screenshot of ${project.name} project`}
                               className="max-w-full h-auto"
                             />
@@ -164,13 +161,14 @@ export const query = graphql`
         image {
           childImageSharp {
             gatsbyImageData(
+              layout: CONSTRAINED
               width: 400
-              height: 200
-              layout: FIXED
               placeholder: BLURRED
+              quality: 95
             )
           }
           publicURL
+          extension
         }
       }
     }

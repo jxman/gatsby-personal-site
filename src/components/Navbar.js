@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import { Transition } from "@headlessui/react"
 
-function Navbar({ title }) {
+function Navbar({ title = "John Xanthopoulos" }) {
   const [isOpen, setIsOpen] = useState(false)
 
   const linkStyle = `
@@ -332,9 +332,6 @@ function Navbar({ title }) {
   )
 }
 
-Navbar.defaultProps = {
-  title: "John Xanthopoulos",
-}
 
 Navbar.propTypes = {
   title: PropTypes.string,

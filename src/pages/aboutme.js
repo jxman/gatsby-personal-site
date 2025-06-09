@@ -25,7 +25,9 @@ function AboutMe({ data }) {
                 className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-xl"
                 width={256}
                 height={256}
-                placeholder="blurred"
+                placeholder="none"
+                quality={95}
+                formats={["auto", "webp", "avif"]}
               />
             </div>
 

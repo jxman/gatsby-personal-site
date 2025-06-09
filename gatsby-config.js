@@ -75,8 +75,7 @@ module.exports = {
           process.env.GATSBY_GOOGLE_ANALYTICS_ID || "G-2HLT4VSZHW", // Google Analytics / GA
         ],
         pluginConfig: {
-          // Only load in production
-          head: false,
+          head: true,
           respectDNT: true,
           exclude:
             process.env.NODE_ENV === "development"
