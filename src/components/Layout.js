@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "./Navbar"
 import Footer from "./Footer"
 import ScrollToTop from "./ScrollToTop"
+import ClientOnly from "./ClientOnly"
 
 const Layout = ({ children }) => {
   return (
@@ -9,7 +10,9 @@ const Layout = ({ children }) => {
       <Navbar />
       <main className="container mx-auto px-3 pb-12 flex-grow">{children}</main>
       <Footer />
-      <ScrollToTop />
+      <ClientOnly>
+        <ScrollToTop />
+      </ClientOnly>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import { Transition } from "@headlessui/react"
 
 function Navbar({ title = "John Xanthopoulos" }) {
   const [isOpen, setIsOpen] = useState(false)
+  const [isClient, setIsClient] = useState(false)
 
   const linkStyle = `
     relative px-3 py-2 text-sm font-medium transition-all duration-200 
@@ -22,6 +23,11 @@ function Navbar({ title = "John Xanthopoulos" }) {
     hover:text-primary hover:bg-base-200 rounded-md
     text-base-content/80 hover:text-primary
   `
+
+  // Initialize client state after hydration
+  React.useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   return (
     <header className="sticky top-0 z-50 bg-base-100/95 backdrop-blur-md border-b border-base-200 shadow-sm">
@@ -74,7 +80,7 @@ function Navbar({ title = "John Xanthopoulos" }) {
               Projects
             </Link>
             <Link
-              to="/blog"
+              to="/blog/"
               className={linkStyle}
               activeClassName={activeLinkStyle}
             >
@@ -167,21 +173,21 @@ function Navbar({ title = "John Xanthopoulos" }) {
       </nav>
 
       {/* Mobile Navigation */}
-      <Transition
-        show={isOpen}
-        enter="transition ease-out duration-200 transform"
-        enterFrom="opacity-0 scale-95 -translate-y-2"
-        enterTo="opacity-100 scale-100 translate-y-0"
-        leave="transition ease-in duration-150 transform"
-        leaveFrom="opacity-100 scale-100 translate-y-0"
-        leaveTo="opacity-0 scale-95 -translate-y-2"
-      >
-        {ref => (
-          <div
-            className="md:hidden border-t border-base-200 bg-base-100/95 backdrop-blur-md"
-            id="mobile-menu"
-          >
-            <div ref={ref} className="px-4 pt-2 pb-3 space-y-1">
+      {isClient && (
+        <Transition
+          show={isOpen}
+          enter="transition ease-out duration-200 transform"
+          enterFrom="opacity-0 scale-95 -translate-y-2"
+          enterTo="opacity-100 scale-100 translate-y-0"
+          leave="transition ease-in duration-150 transform"
+          leaveFrom="opacity-100 scale-100 translate-y-0"
+          leaveTo="opacity-0 scale-95 -translate-y-2"
+        >
+        <div
+          className="md:hidden border-t border-base-200 bg-base-100/95 backdrop-blur-md"
+          id="mobile-menu"
+        >
+          <div className="px-4 pt-2 pb-3 space-y-1">
               <Link
                 to="/"
                 className={mobileStyle}
@@ -252,7 +258,7 @@ function Navbar({ title = "John Xanthopoulos" }) {
                 </div>
               </Link>
               <Link
-                to="/blog"
+                to="/blog/"
                 className={mobileStyle}
                 activeClassName="text-primary bg-primary/10 font-semibold"
                 onClick={() => setIsOpen(false)}
@@ -326,8 +332,8 @@ function Navbar({ title = "John Xanthopoulos" }) {
               </div>
             </div>
           </div>
-        )}
-      </Transition>
+        </Transition>
+      )}
     </header>
   )
 }

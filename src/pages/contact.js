@@ -6,11 +6,16 @@ import AnimatedSection from "../components/AnimatedSection"
 
 function Contact() {
   const [showModal, setShowModal] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   })
+
+  React.useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const handleInputChange = e => {
     const { name, value } = e.target
@@ -231,7 +236,7 @@ function Contact() {
         </div>
 
         {/* Modal */}
-        {showModal && (
+        {isClient && showModal && (
           <div className="modal modal-open">
             <div className="modal-box">
               <h3 className="font-bold text-lg mb-4">

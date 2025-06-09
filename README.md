@@ -12,7 +12,18 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ## 🆕 Recent Updates
 
-**Latest Improvements (January 2025):**
+**Latest Improvements (June 2025):**
+
+- ✅ **React Hydration Fixes**: Resolved SSR/client hydration mismatches causing React errors #418 and #423
+- ✅ **ClientOnly Component**: Added reusable component for client-side only rendering to prevent hydration issues
+- ✅ **Enhanced SSR Safety**: Improved browser API checks for ScrollToTop, AnimatedSection, and Resume components
+- ✅ **Deployment Pipeline**: Fixed AWS S3 deployment scripts and configured CloudFront invalidation
+- ✅ **Navbar Enhancements**: Fixed Transition component implementation and route consistency
+- ✅ **Manifest Icons**: Optimized PWA manifest with proper square icon configuration
+- ✅ **SEO Improvements**: Enhanced structured data safety and JSON.stringify handling
+- ✅ **Security Audit**: Comprehensive security scan confirming no sensitive data exposure
+
+**Previous Improvements (January 2025):**
 
 - ✅ **AWS Health Project Enhancement**: Added detailed architecture diagram with professional SVG visualization
 - ✅ **Responsive Design Overhaul**: Implemented mobile-first responsive design across all AWS project pages
@@ -57,7 +68,8 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 │   │   ├── Footer.js       # Footer component
 │   │   ├── Seo.js          # SEO meta tags component
 │   │   ├── AnimatedSection.js # Animation wrapper component
-│   │   └── ScrollToTop.js  # Scroll to top functionality
+│   │   ├── ScrollToTop.js  # Scroll to top functionality
+│   │   └── ClientOnly.js   # Client-side only rendering utility
 │   ├── pages/              # Route pages
 │   │   ├── index.js        # Homepage
 │   │   ├── aboutme.js      # About page

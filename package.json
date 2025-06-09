@@ -24,11 +24,11 @@
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "deploy:prod": "aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=31536000 --exclude='*.html' && aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=0 --include='*.html'",
+    "deploy:prod": "aws s3 sync ./public/ s3://www.synepho.com --delete --cache-control max-age=31536000 --exclude='*.html' && aws s3 sync ./public/ s3://www.synepho.com --cache-control max-age=0 --include='*.html'",
     "deploy:simple": "aws s3 sync ./public/ s3://www.synepho.com --delete",
     "build-and-deploy": "npm run build && npm run deploy:prod",
     "package": "npm run build && zip -FSr -X build.zip ./public/",
-    "invalidate": "aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths '/*'",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID:-E2UW9JLSX34HRT} --paths '/*'",
     "deploy:full": "npm run build && npm run deploy:prod && npm run invalidate"
   },
   "dependencies": {

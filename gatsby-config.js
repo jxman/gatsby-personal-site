@@ -103,7 +103,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#4A90E2`,
         display: `standalone`,
-        icon: `src/images/me2.jpeg`, // Use existing image as fallback
+        icon: `src/images/me.jpeg`,
         icon_options: {
           purpose: `any maskable`,
         },

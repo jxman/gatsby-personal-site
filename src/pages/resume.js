@@ -11,7 +11,9 @@ function Resume({ data }) {
     setIsProcessing(true)
     // Add a small delay to ensure the DOM is ready
     setTimeout(() => {
-      window.print()
+      if (typeof window !== "undefined") {
+        window.print()
+      }
       setIsProcessing(false)
     }, 100)
   }
@@ -19,11 +21,15 @@ function Resume({ data }) {
   const handleDownload = () => {
     setIsProcessing(true)
     // Show instruction for PDF download
-    alert(
-      'In the print dialog that opens, select "Save as PDF" as your destination to download a PDF copy of this resume.',
-    )
+    if (typeof window !== "undefined") {
+      alert(
+        'In the print dialog that opens, select "Save as PDF" as your destination to download a PDF copy of this resume.',
+      )
+    }
     setTimeout(() => {
-      window.print()
+      if (typeof window !== "undefined") {
+        window.print()
+      }
       setIsProcessing(false)
     }, 100)
   }
