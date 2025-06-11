@@ -47,7 +47,7 @@ const AnimatedSection = ({
         observer.unobserve(currentElement)
       }
     }
-  }, [delay, threshold])
+  }, [delay, threshold, isVisible])
 
   // Prevent animations until client-side hydration is complete
   const shouldAnimate = hasLoaded && typeof window !== "undefined"

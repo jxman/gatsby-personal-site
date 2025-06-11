@@ -44,20 +44,50 @@ function Projects({ data }) {
                     <figure className="lg:w-1/2">
                       <div className="mockup-window border bg-base-300">
                         <div className="flex justify-center px-4 py-16 bg-base-200">
-                          {project.image.extension === 'svg' || !project.image.childImageSharp ? (
-                            <img
-                              src={project.image.publicURL}
-                              alt={`Screenshot of ${project.name} project`}
-                              className="max-w-full h-auto"
-                            />
+                          {project.demo_link ? (
+                            <a
+                              href={project.demo_link}
+                              {...(project.demo_link.startsWith('http') ? {
+                                target: "_blank",
+                                rel: "noopener noreferrer"
+                              } : {})}
+                              className="cursor-pointer hover:opacity-80 transition-opacity duration-200"
+                              aria-label={`View demo of ${project.name}`}
+                            >
+                              {project.image.extension === 'svg' || !project.image.childImageSharp ? (
+                                <img
+                                  src={project.image.publicURL}
+                                  alt={`Screenshot of ${project.name} project`}
+                                  className="max-w-full h-auto"
+                                />
+                              ) : (
+                                <GatsbyImage
+                                  image={
+                                    project.image.childImageSharp.gatsbyImageData
+                                  }
+                                  alt={`Screenshot of ${project.name} project`}
+                                  className="max-w-full h-auto"
+                                />
+                              )}
+                            </a>
                           ) : (
-                            <GatsbyImage
-                              image={
-                                project.image.childImageSharp.gatsbyImageData
-                              }
-                              alt={`Screenshot of ${project.name} project`}
-                              className="max-w-full h-auto"
-                            />
+                            <>
+                              {project.image.extension === 'svg' || !project.image.childImageSharp ? (
+                                <img
+                                  src={project.image.publicURL}
+                                  alt={`Screenshot of ${project.name} project`}
+                                  className="max-w-full h-auto"
+                                />
+                              ) : (
+                                <GatsbyImage
+                                  image={
+                                    project.image.childImageSharp.gatsbyImageData
+                                  }
+                                  alt={`Screenshot of ${project.name} project`}
+                                  className="max-w-full h-auto"
+                                />
+                              )}
+                            </>
                           )}
                         </div>
                       </div>

@@ -34,7 +34,7 @@
   {
     "id": 5,
     "name": "AWS Multi-region Hosted Site",
-    "image": "../images/aws-site.png",
+    "image": "../images/architecture-diagram.svg",
     "text": "Instead of going with a hosting provider like Netlify or Vercel, I wanted to create my own production-grade and fully redundant site within Amazon Web Services. Click below to view more details on the design which includes multi-region hosting, CDN caching and automated TLS key renewals. All the AWS resources for this project have been built and configured using Terraform code and fully automated. (See my Github repo below for more details.)",
     "demo_link": "../awssite/",
     "github_link": "https://github.com/jxman/synepho-s3cf-site"

@@ -14,6 +14,9 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 **Latest Improvements (June 2025):**
 
+- ✅ **Project Cleanup**: Removed 15+ unused files (~1.1-2.3MB saved) including obsolete images and dependencies
+- ✅ **Dependency Optimization**: Removed unused `axios` package and added missing `prop-types` dependency
+- ✅ **Image Asset Cleanup**: Eliminated duplicate files and unused company logos for cleaner project structure
 - ✅ **React Hydration Fixes**: Resolved SSR/client hydration mismatches causing React errors #418 and #423
 - ✅ **ClientOnly Component**: Added reusable component for client-side only rendering to prevent hydration issues
 - ✅ **Enhanced SSR Safety**: Improved browser API checks for ScrollToTop, AnimatedSection, and Resume components

@@ -1,5 +1,4 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
 import AnimatedSection from "../components/AnimatedSection"
@@ -43,9 +42,9 @@ function awssite() {
 
                 {/* Architecture Diagram */}
                 <figure className="mb-8 flex justify-center">
-                  <StaticImage
+                  <img
                     className="w-full max-w-4xl rounded-2xl shadow-2xl"
-                    src="../images/aws-site.png"
+                    src="/architecture-diagram.svg"
                     alt="AWS Multi-Region Hosting Architecture Diagram"
                   />
                 </figure>
