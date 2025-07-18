@@ -48,7 +48,7 @@ const LawnSmartAppReleasePost = () => {
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-base-content/70 mb-8">
               <div className="flex items-center gap-4">
-                <span>Published: January 7, 2025</span>
+                <span>Published: June 7, 2025</span>
                 <span className="hidden sm:inline">•</span>
                 <span>6 min read</span>
               </div>

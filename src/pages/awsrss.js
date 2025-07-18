@@ -41,12 +41,12 @@ function awsrss() {
                   AWS RSS Status Check Site
                 </h1>
 
-                {/* System Screenshot */}
+                {/* System Architecture Diagram */}
                 <figure className="mb-8 flex justify-center">
                   <StaticImage
-                    className="w-full max-w-4xl rounded-2xl shadow-2xl"
-                    src="../images/awsrss.png"
-                    alt="AWS RSS Status Check System Interface"
+                    className="w-full max-w-6xl rounded-2xl shadow-2xl"
+                    src="../images/aws-rss-architecture.svg"
+                    alt="AWS RSS Status Check System Architecture Diagram"
                   />
                 </figure>
 

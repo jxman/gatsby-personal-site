@@ -50,7 +50,7 @@ const BlogPage = () => {
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4 text-sm text-base-content/60">
-                    <span>Published: January 7, 2025</span>
+                    <span>Published: June 7, 2025</span>
                     <span>•</span>
                     <span>6 min read</span>
                   </div>

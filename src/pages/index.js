@@ -269,7 +269,7 @@ const IndexPage = () => {
 
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-4 text-sm text-base-content/60">
-                        <span>Published: January 7, 2025</span>
+                        <span>Published: June 7, 2025</span>
                         <span className="hidden sm:inline">•</span>
                         <span>6 min read</span>
                       </div>

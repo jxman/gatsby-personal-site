@@ -42,9 +42,9 @@
   {
     "id": 6,
     "name": "AWS RSS Status Check Site",
-    "image": "../images/awsrss.png",
-    "text": "A Node.js app running on AWS Lambda with a DynamoDB backend and using the Serverless Framework. This app is designed to scan a list of 3rd party vendor RSS status pages and alert on any notifications for outages and/or maintenance updates. Once a vendor reports an issue, an alert is sent to a pre-defined webhook and the state of the alert is managed within a DynamoDB table. Currently I am working on a React web-based front-end to both admin the listing of sites and view the status of alerts.",
-    "demo_link": "../awsrss/",
+    "image": "../images/aws-rss-architecture.svg",
+    "text": "Serverless AWS RSS monitoring system built with Terraform infrastructure-as-code. Features EventBridge Scheduler triggering Lambda functions to scan vendor RSS feeds, DynamoDB for state management and duplicate detection, and Microsoft Teams webhook notifications. Includes multi-environment support (dev/prod), comprehensive CloudWatch monitoring, cost optimization with reserved concurrency, and automatic TTL cleanup. Architecture demonstrates AWS best practices with IAM roles, efficient memory allocation, and Node.js 20.x runtime for optimal performance.",
+    "demo_link": "https://awsrsschk.synepho.com/",
     "github_link": "https://github.com/jxman/awsrsschk"
   },
   {
