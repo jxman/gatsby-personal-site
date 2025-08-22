@@ -7,7 +7,7 @@ This file contains important information for Claude Code when working on this pr
 **John Xanthopoulos Personal Portfolio Website**
 - **Tech Stack**: Gatsby.js, React 18, Tailwind CSS, DaisyUI
 - **Deployment**: AWS S3 + CloudFront (direct AWS CLI deployment)
-- **Repository**: https://github.com/jxman/personal-site-new
+- **Repository**: https://github.com/jxman/gatsby-personal-site
 - **Live Site**: https://synepho.com
 
 ## Key Development Commands
@@ -277,7 +277,7 @@ aws cloudfront create-invalidation \
 ## Contact & Support
 
 - **Website**: https://synepho.com
-- **GitHub**: https://github.com/jxman/personal-site-new
+- **GitHub**: https://github.com/jxman/gatsby-personal-site
 - **Issues**: Use GitHub Issues for bug reports and feature requests
 
 ---

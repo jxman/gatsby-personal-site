@@ -113,8 +113,8 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/jxman/personal-site-new.git
-   cd personal-site-new
+   git clone https://github.com/jxman/gatsby-personal-site.git
+   cd gatsby-personal-site
    ```
 
 2. **Install dependencies**
@@ -680,11 +680,11 @@ chore(deps): update dependencies to latest versions
 
 ```bash
 # 1. Fork and clone
-git clone https://github.com/your-username/personal-site-new.git
-cd personal-site-new
+git clone https://github.com/your-username/gatsby-personal-site.git
+cd gatsby-personal-site
 
 # 2. Set up upstream remote
-git remote add upstream https://github.com/jxman/personal-site-new.git
+git remote add upstream https://github.com/jxman/gatsby-personal-site.git
 
 # 3. Create environment file
 cp .env.example .env.development
@@ -896,8 +896,8 @@ Ready to contribute? Follow our git workflow above and these guidelines:
 ```bash
 # 1. Fork repository on GitHub
 # 2. Clone your fork
-git clone https://github.com/your-username/personal-site-new.git
-cd personal-site-new
+git clone https://github.com/your-username/gatsby-personal-site.git
+cd gatsby-personal-site
 
 # 3. Set up development environment
 cp .env.example .env.development
