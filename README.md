@@ -156,7 +156,7 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 | `npm run build-and-deploy` | Build and deploy to S3 (production)       |
 | `npm run package`          | Build and create deployment zip file      |
 | `npm run invalidate`       | Invalidate CloudFront cache               |
-| `npm run deploy:full`      | Complete deployment pipeline              |
+| `npm run deploy:full`      | Complete deployment with progress feedback |
 
 ## 🌩 AWS Deployment
 
@@ -175,8 +175,17 @@ Users → CloudFront CDN → S3 Static Website Hosting
 **Secure AWS CLI Deployment:**
 
 ```bash
+# Quick deployment
 npm run build-and-deploy
+
+# Full deployment with progress feedback
+npm run deploy:full
 ```
+
+The enhanced `deploy:full` command provides:
+- ✅ **Progress messages** - Clear start and completion feedback
+- ✅ **Complete pipeline** - Build → Deploy → Cache invalidation  
+- ✅ **Error handling** - Sequential execution with proper error stopping
 
 This approach:
 

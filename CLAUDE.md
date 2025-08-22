@@ -28,7 +28,7 @@ npm run clean               # Clean Gatsby cache
 # Deployment (Production)
 npm run deploy:prod         # Deploy to S3 with optimized caching
 npm run build-and-deploy    # Build + deploy in one command
-npm run deploy:full         # Build + deploy + CloudFront invalidation
+npm run deploy:full         # Complete deployment with progress messages
 
 # Code Quality
 npm run format              # Format code with Prettier
