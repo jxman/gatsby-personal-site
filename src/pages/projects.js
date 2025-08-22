@@ -10,7 +10,6 @@ function Projects({ data }) {
     allProjectsJson: { nodes: projectslist },
   } = data
 
-
   return (
     <>
       <Seo
@@ -47,14 +46,17 @@ function Projects({ data }) {
                           {project.demo_link ? (
                             <a
                               href={project.demo_link}
-                              {...(project.demo_link.startsWith('http') ? {
-                                target: "_blank",
-                                rel: "noopener noreferrer"
-                              } : {})}
+                              {...(project.demo_link.startsWith("http")
+                                ? {
+                                    target: "_blank",
+                                    rel: "noopener noreferrer",
+                                  }
+                                : {})}
                               className="cursor-pointer hover:opacity-80 transition-opacity duration-200"
                               aria-label={`View demo of ${project.name}`}
                             >
-                              {project.image.extension === 'svg' || !project.image.childImageSharp ? (
+                              {project.image.extension === "svg" ||
+                              !project.image.childImageSharp ? (
                                 <img
                                   src={project.image.publicURL}
                                   alt={`Screenshot of ${project.name} project`}
@@ -63,7 +65,8 @@ function Projects({ data }) {
                               ) : (
                                 <GatsbyImage
                                   image={
-                                    project.image.childImageSharp.gatsbyImageData
+                                    project.image.childImageSharp
+                                      .gatsbyImageData
                                   }
                                   alt={`Screenshot of ${project.name} project`}
                                   className="max-w-full h-auto"
@@ -72,7 +75,8 @@ function Projects({ data }) {
                             </a>
                           ) : (
                             <>
-                              {project.image.extension === 'svg' || !project.image.childImageSharp ? (
+                              {project.image.extension === "svg" ||
+                              !project.image.childImageSharp ? (
                                 <img
                                   src={project.image.publicURL}
                                   alt={`Screenshot of ${project.name} project`}
@@ -81,7 +85,8 @@ function Projects({ data }) {
                               ) : (
                                 <GatsbyImage
                                   image={
-                                    project.image.childImageSharp.gatsbyImageData
+                                    project.image.childImageSharp
+                                      .gatsbyImageData
                                   }
                                   alt={`Screenshot of ${project.name} project`}
                                   className="max-w-full h-auto"
@@ -117,10 +122,12 @@ function Projects({ data }) {
                           <a
                             href={project.demo_link}
                             className="btn btn-primary"
-                            {...(project.demo_link.startsWith('http') ? {
-                              target: "_blank",
-                              rel: "noopener noreferrer"
-                            } : {})}
+                            {...(project.demo_link.startsWith("http")
+                              ? {
+                                  target: "_blank",
+                                  rel: "noopener noreferrer",
+                                }
+                              : {})}
                             aria-label={`View live demo of ${project.name}`}
                           >
                             <svg

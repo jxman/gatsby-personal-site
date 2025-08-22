@@ -360,8 +360,8 @@ const LawnSmartAppReleasePost = () => {
                 rel="noopener noreferrer"
               >
                 lawnsmartapp.com
-              </a>
-              {" "}was the culmination of weeks of AI-assisted development, testing,
+              </a>{" "}
+              was the culmination of weeks of AI-assisted development, testing,
               and refinement. The deployment pipeline includes:
             </p>
 
@@ -426,8 +426,8 @@ const LawnSmartAppReleasePost = () => {
                 rel="noopener noreferrer"
               >
                 lawnsmartapp.com
-              </a>
-              {" "}and give Lawn.Smart a try. Whether you're dealing with cool-season
+              </a>{" "}
+              and give Lawn.Smart a try. Whether you're dealing with cool-season
               grasses in Minnesota or warm-season varieties in Arizona, the app
               will provide zone-specific guidance tailored to your local growing
               conditions.

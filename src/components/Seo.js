@@ -4,7 +4,12 @@ import { Helmet } from "react-helmet"
 import { useLocation } from "@reach/router"
 import { useStaticQuery, graphql } from "gatsby"
 
-const SEO = ({ title = null, description = null, image = null, article = false }) => {
+const SEO = ({
+  title = null,
+  description = null,
+  image = null,
+  article = false,
+}) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -96,9 +101,13 @@ const SEO = ({ title = null, description = null, image = null, article = false }
           image: seo.image || "",
           email: "mailto:john@synepho.com",
           sameAs: [
-            linkedinUsername ? `https://www.linkedin.com/in/${linkedinUsername}/` : "",
+            linkedinUsername
+              ? `https://www.linkedin.com/in/${linkedinUsername}/`
+              : "",
             githubUsername ? `https://github.com/${githubUsername}` : "",
-            twitterUsername ? `https://twitter.com/${twitterUsername.replace("@", "")}` : "",
+            twitterUsername
+              ? `https://twitter.com/${twitterUsername.replace("@", "")}`
+              : "",
           ].filter(Boolean),
           knowsAbout: [
             "Software Development",
@@ -141,7 +150,6 @@ SEO.propTypes = {
   image: PropTypes.string,
   article: PropTypes.bool,
 }
-
 
 const query = graphql`
   query SEO {

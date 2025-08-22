@@ -183,11 +183,11 @@ function Navbar({ title = "John Xanthopoulos" }) {
           leaveFrom="opacity-100 scale-100 translate-y-0"
           leaveTo="opacity-0 scale-95 -translate-y-2"
         >
-        <div
-          className="md:hidden border-t border-base-200 bg-base-100/95 backdrop-blur-md"
-          id="mobile-menu"
-        >
-          <div className="px-4 pt-2 pb-3 space-y-1">
+          <div
+            className="md:hidden border-t border-base-200 bg-base-100/95 backdrop-blur-md"
+            id="mobile-menu"
+          >
+            <div className="px-4 pt-2 pb-3 space-y-1">
               <Link
                 to="/"
                 className={mobileStyle}
@@ -337,7 +337,6 @@ function Navbar({ title = "John Xanthopoulos" }) {
     </header>
   )
 }
-
 
 Navbar.propTypes = {
   title: PropTypes.string,

@@ -110,7 +110,9 @@ function Resume({ data }) {
             <div className="flex">
               <div className="ml-3">
                 <p className="text-sm text-blue-700">
-                  <strong>Note:</strong> This resume version is not current. An updated CV reflecting recent projects and accomplishments is currently in progress.
+                  <strong>Note:</strong> This resume version is not current. An
+                  updated CV reflecting recent projects and accomplishments is
+                  currently in progress.
                 </p>
               </div>
             </div>

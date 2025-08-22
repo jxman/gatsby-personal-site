@@ -14,7 +14,7 @@ const AnimatedSection = ({
 
   useEffect(() => {
     setHasLoaded(true)
-    
+
     if (typeof window === "undefined" || !window.IntersectionObserver) {
       // Fallback for SSR or browsers without IntersectionObserver
       setIsVisible(true)

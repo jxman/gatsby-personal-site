@@ -92,11 +92,11 @@ const AIPairProgrammingPost = () => {
           >
             <p className="text-xl text-base-content/70 italic mb-8">
               Ever wonder how a holiday coding challenge could lead to
-              revolutionizing your work processes and even launching your first app?
-              That's exactly what happened to me, and I'm excited to share how my
-              exploration of AI assistants evolved from solving puzzles to building
-              production-ready cloud infrastructure and practical applications that
-              solve real-world problems.
+              revolutionizing your work processes and even launching your first
+              app? That's exactly what happened to me, and I'm excited to share
+              how my exploration of AI assistants evolved from solving puzzles
+              to building production-ready cloud infrastructure and practical
+              applications that solve real-world problems.
             </p>
 
             <h2>The Holiday Challenge That Started It All</h2>
@@ -286,9 +286,10 @@ const AIPairProgrammingPost = () => {
             <h2>From Lawn Care to AI: The Unexpected Connection</h2>
 
             <p>
-              But the AI journey didn't stop with AWS infrastructure. In a twist that
-              perfectly combines two of my passions — maintaining my lawn and exploring
-              how AI can transform our daily work — I recently launched my first app:
+              But the AI journey didn't stop with AWS infrastructure. In a twist
+              that perfectly combines two of my passions — maintaining my lawn
+              and exploring how AI can transform our daily work — I recently
+              launched my first app:
               <a
                 href="https://www.lawnsmartapp.com"
                 target="_blank"
@@ -300,22 +301,24 @@ const AIPairProgrammingPost = () => {
             </p>
 
             <p>
-              What started as a weekend project to better manage my own lawn care has
-              evolved into a comprehensive Progressive Web App that provides USDA
-              zone-specific recommendations, intelligent task scheduling, and
-              personalized guidance. The most exciting part? I built the latest features
-              over just a few nights since Claude Code was released on the Pro plan —
-              pure vibe programming with AI assistance.
+              What started as a weekend project to better manage my own lawn
+              care has evolved into a comprehensive Progressive Web App that
+              provides USDA zone-specific recommendations, intelligent task
+              scheduling, and personalized guidance. The most exciting part? I
+              built the latest features over just a few nights since Claude Code
+              was released on the Pro plan — pure vibe programming with AI
+              assistance.
             </p>
 
             <h3>The Speed Revolution</h3>
 
             <p>
-              This is where things get really interesting. The technology is evolving
-              at breakneck speed. What took weeks before now takes days, sometimes hours.
-              The development velocity with AI assistance is truly remarkable, and it's
-              changing not just how we build software, but how we think about what's
-              possible in the time we have available.
+              This is where things get really interesting. The technology is
+              evolving at breakneck speed. What took weeks before now takes
+              days, sometimes hours. The development velocity with AI assistance
+              is truly remarkable, and it's changing not just how we build
+              software, but how we think about what's possible in the time we
+              have available.
             </p>
 
             <h2>Lessons Learned</h2>
@@ -344,14 +347,17 @@ const AIPairProgrammingPost = () => {
             <h3>The Professional Reality: Your Job Will Change</h3>
 
             <p>
-              But here's the key insight from this entire journey: AI isn't here to
-              replace us — it's here to amplify our capabilities and transform how we
-              work. Your job <strong>WILL</strong> change with AI. The question isn't
-              whether, but how quickly you'll adapt and leverage these tools to enhance
-              your productivity, creativity, and problem-solving abilities.
+              But here's the key insight from this entire journey: AI isn't here
+              to replace us — it's here to amplify our capabilities and
+              transform how we work. Your job <strong>WILL</strong> change with
+              AI. The question isn't whether, but how quickly you'll adapt and
+              leverage these tools to enhance your productivity, creativity, and
+              problem-solving abilities.
             </p>
 
-            <p>If you're ready to start your own AI journey, here's my advice:</p>
+            <p>
+              If you're ready to start your own AI journey, here's my advice:
+            </p>
 
             <ul>
               <li>✅ Experiment with AI tools in your field</li>
@@ -361,10 +367,10 @@ const AIPairProgrammingPost = () => {
             </ul>
 
             <p>
-              The intersection of AI, cloud technologies, and practical business solutions
-              is where the magic happens. Whether you're building infrastructure
-              automation or creating apps that solve real-world problems like lawn care,
-              the principles remain the same.
+              The intersection of AI, cloud technologies, and practical business
+              solutions is where the magic happens. Whether you're building
+              infrastructure automation or creating apps that solve real-world
+              problems like lawn care, the principles remain the same.
             </p>
 
             <h2>What's Next?</h2>

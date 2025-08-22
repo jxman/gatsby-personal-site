@@ -142,21 +142,21 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ### Available Scripts
 
-| Script                     | Purpose                                    |
-| -------------------------- | ------------------------------------------ |
+| Script                     | Purpose                                   |
+| -------------------------- | ----------------------------------------- |
 | `npm run dev`              | Start development server (alias)          |
-| `npm run develop`          | Start development server                   |
-| `npm run build`            | Build for production                       |
-| `npm run serve`            | Preview production build                   |
-| `npm run clean`            | Clean Gatsby cache                         |
-| `npm run format`           | Format code with Prettier                  |
-| `npm run format:check`     | Check code formatting without changes      |
+| `npm run develop`          | Start development server                  |
+| `npm run build`            | Build for production                      |
+| `npm run serve`            | Preview production build                  |
+| `npm run clean`            | Clean Gatsby cache                        |
+| `npm run format`           | Format code with Prettier                 |
+| `npm run format:check`     | Check code formatting without changes     |
 | `npm run deploy:prod`      | Deploy to S3 with optimized cache headers |
 | `npm run deploy:simple`    | Simple S3 sync without cache optimization |
 | `npm run build-and-deploy` | Build and deploy to S3 (production)       |
-| `npm run package`          | Build and create deployment zip file       |
-| `npm run invalidate`       | Invalidate CloudFront cache                |
-| `npm run deploy:full`      | Complete deployment pipeline               |
+| `npm run package`          | Build and create deployment zip file      |
+| `npm run invalidate`       | Invalidate CloudFront cache               |
+| `npm run deploy:full`      | Complete deployment pipeline              |
 
 ## 🌩 AWS Deployment
 
@@ -283,16 +283,19 @@ AWS_S3_BUCKET=www.synepho.com
 This portfolio features dedicated demo pages for AWS projects with professional architecture diagrams and detailed technical explanations:
 
 #### AWS Health Notifications (`/awshealth/`)
+
 - **Architecture Diagram**: Professional SVG showing EventBridge, Lambda, SNS integration
 - **Technical Details**: Terraform automation, multi-environment deployment, enhanced notifications
 - **Responsive Design**: Mobile-optimized with horizontal scrolling for large diagrams
 
 #### AWS Multi-Region Site (`/awssite/`)
+
 - **Infrastructure Overview**: CloudFront, S3, multi-region setup visualization
 - **Platform Details**: Automated failover, geo-load balancing, TLS management
 - **Performance Focus**: Optimized images and responsive layout
 
 #### AWS RSS Status Check (`/awsrss/`)
+
 - **System Architecture**: Lambda + DynamoDB + Serverless Framework
 - **Monitoring Features**: Real-time alerts, webhook notifications, state management
 - **Future Roadmap**: React frontend development plans
@@ -303,14 +306,17 @@ Enhanced the projects component to handle both raster and vector images seamless
 
 ```javascript
 // Automatic detection and rendering
-{project.image.childImageSharp ? (
-  <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} />
-) : (
-  <img src={project.image.publicURL} />
-)}
+{
+  project.image.childImageSharp ? (
+    <GatsbyImage image={project.image.childImageSharp.gatsbyImageData} />
+  ) : (
+    <img src={project.image.publicURL} />
+  )
+}
 ```
 
 **Benefits:**
+
 - ✅ Raster images (PNG/JPG) get full Gatsby optimization
 - ✅ SVG files render directly with crisp vector graphics
 - ✅ Fallback handling prevents errors
@@ -346,10 +352,11 @@ Edit `src/content/projects.json`:
 3. **SVG support**: SVG files work in both locations - `src/images/` for GraphQL integration or `static/` for direct access
 
 **Example for projects:**
+
 ```json
 {
-  "image": "../images/project-screenshot.png",  // Processed by Gatsby
-  "demo_link": "/architecture-diagram.svg"     // Direct static access
+  "image": "../images/project-screenshot.png", // Processed by Gatsby
+  "demo_link": "/architecture-diagram.svg" // Direct static access
 }
 ```
 
