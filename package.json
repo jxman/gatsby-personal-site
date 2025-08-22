@@ -29,7 +29,7 @@
     "build-and-deploy": "npm run build && npm run deploy:prod",
     "package": "npm run build && zip -FSr -X build.zip ./public/",
     "invalidate": "aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID:-E2UW9JLSX34HRT} --paths '/*'",
-    "deploy:full": "npm run build && npm run deploy:prod && npm run invalidate"
+    "deploy:full": "echo 'Deploying to production...' && npm run build && npm run deploy:prod && npm run invalidate && echo 'Deployment complete: https://synepho.com'"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
