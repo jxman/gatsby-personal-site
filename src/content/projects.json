@@ -5,7 +5,7 @@
     "image": "../images/lawn-smart-app.png",
     "text": "A comprehensive USDA zone-customized lawn care management application built with React and Tailwind CSS. Features PWA support, glassmorphism UI design, and personalized guidance for all 50 US states and hardiness zones 3a-11b. Includes month-by-month task management, equipment tracking, photo documentation, weather alerts, and zone-specific timing recommendations for optimal lawn health across all US regions.",
     "demo_link": "https://www.lawnsmartapp.com",
-    "github_link": "https://github.com/jxman/smart-lawn"
+    "github_link": "https://github.com/jxman/aws-hosting-lawnsmartapp"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "image": "../images/personal-site.png",
     "text": "A modern, responsive personal portfolio website built with Gatsby.js, React 18, and Tailwind CSS, deployed to AWS S3 with CloudFront CDN. Features comprehensive SEO optimization, StaticImage performance enhancements, structured data (JSON-LD), accessibility compliance, and functional contact forms. Utilizes direct AWS CLI deployment for enhanced security, eliminating vulnerable plugin dependencies. Includes Google Analytics, sitemap generation, and follows modern git best practices with conventional commits.",
     "demo_link": "https://synepho.com/",
-    "github_link": "https://github.com/jxman/personal-site-new"
+    "github_link": "https://github.com/jxman/gatsby-personal-site"
   },
   {
     "id": 4,
@@ -44,7 +44,7 @@
     "name": "AWS RSS Status Check Site",
     "image": "../images/aws-rss-architecture.svg",
     "text": "Serverless AWS RSS monitoring system built with Terraform infrastructure-as-code. Features EventBridge Scheduler triggering Lambda functions to scan vendor RSS feeds, DynamoDB for state management and duplicate detection, and Microsoft Teams webhook notifications. Includes multi-environment support (dev/prod), comprehensive CloudWatch monitoring, cost optimization with reserved concurrency, and automatic TTL cleanup. Architecture demonstrates AWS best practices with IAM roles, efficient memory allocation, and Node.js 20.x runtime for optimal performance.",
-    "demo_link": "https://awsrsschk.synepho.com/",
+    "demo_link": "../awsrss/",
     "github_link": "https://github.com/jxman/awsrsschk"
   },
   {
