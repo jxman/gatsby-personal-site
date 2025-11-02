@@ -245,38 +245,38 @@ const IndexPage = () => {
                   <div className="card-body">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="badge badge-primary">New</div>
-                      <div className="badge badge-outline">Lawn Care App</div>
+                      <div className="badge badge-outline">AWS</div>
                       <div className="badge badge-accent">AI Development</div>
                     </div>
 
                     <h3 className="card-title text-2xl mb-4">
                       <Link
-                        to="/blog/lawnsmartapp-release"
+                        to="/blog/aws-services-dashboard-release"
                         className="hover:text-primary transition-colors"
                       >
-                        From Weekend Lawn Care to Zone-Intelligent App:
-                        Releasing Lawn.Smart
+                        Building AWS Services Dashboard: A Modular Architecture
+                        Journey with AI-Assisted Development
                       </Link>
                     </h3>
 
                     <p className="text-base-content/70 mb-6 leading-relaxed">
-                      How my passion for lawn care and AI-powered development
-                      led to creating a comprehensive USDA zone-customized lawn
-                      management application. From "vibe coding" with Claude to
-                      launching at lawnsmartapp.com — the story of building
-                      something genuinely useful.
+                      How strategic planning and modular serverless architecture
+                      led to a production-ready AWS monitoring platform, built
+                      entirely with Claude Code. Learn why design sessions
+                      matter more than rushing to code when working with AI
+                      assistants.
                     </p>
 
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                       <div className="flex items-center gap-4 text-sm text-base-content/60">
-                        <span>Published: June 7, 2025</span>
+                        <span>Published: October 24, 2025</span>
                         <span className="hidden sm:inline">•</span>
-                        <span>6 min read</span>
+                        <span>8 min read</span>
                       </div>
 
                       <div className="flex gap-3">
                         <Link
-                          to="/blog/lawnsmartapp-release"
+                          to="/blog/aws-services-dashboard-release"
                           className="btn btn-primary hover:scale-105 transition-transform duration-200"
                         >
                           Read More

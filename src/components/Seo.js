@@ -45,10 +45,24 @@ const SEO = ({
       <meta name="author" content={author} />
       <meta name="image" content={seo.image} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
+      <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
+      <meta
+        name="googlebot"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
+      <meta name="bingbot" content="index, follow" />
       <meta name="format-detection" content="telephone=no" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="geo.region" content="US-MA" />
+      <meta name="geo.placename" content="Massachusetts, United States" />
+      <meta name="ICBM" content="42.3601, -71.0589" />
       <link rel="canonical" href={seo.url} />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
 
       {/* Favicon and app icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -70,9 +84,16 @@ const SEO = ({
       )}
 
       {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && <meta property="og:image:secure_url" content={seo.image} />}
       {seo.image && <meta property="og:image:width" content="1200" />}
       {seo.image && <meta property="og:image:height" content="630" />}
       {seo.image && <meta property="og:image:type" content="image/png" />}
+      {seo.image && (
+        <meta
+          property="og:image:alt"
+          content={`Professional photo of ${author} - ${seo.title}`}
+        />
+      )}
 
       <meta name="twitter:card" content="summary_large_image" />
       {twitterUsername && (
@@ -93,49 +114,79 @@ const SEO = ({
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Person",
-          name: "John Xanthopoulos",
-          jobTitle: "IT Executive",
-          description: seo.description || "",
-          url: seo.url || "",
-          image: seo.image || "",
-          email: "mailto:john@synepho.com",
-          sameAs: [
-            linkedinUsername
-              ? `https://www.linkedin.com/in/${linkedinUsername}/`
-              : "",
-            githubUsername ? `https://github.com/${githubUsername}` : "",
-            twitterUsername
-              ? `https://twitter.com/${twitterUsername.replace("@", "")}`
-              : "",
-          ].filter(Boolean),
-          knowsAbout: [
-            "Software Development",
-            "IT Management",
-            "AWS",
-            "Terraform",
-            "React",
-            "Cloud Architecture",
-            "JavaScript",
-            "Web Development",
-            "Technology Leadership",
-          ],
-          alumniOf: {
-            "@type": "Organization",
-            name: "University of Massachusetts",
-          },
-          worksFor: {
-            "@type": "Organization",
-            name: "Technology Company",
-          },
-          hasOccupation: {
-            "@type": "Occupation",
-            name: "IT Executive",
-            occupationLocation: {
-              "@type": "Country",
-              name: "United States",
+          "@graph": [
+            {
+              "@type": "Person",
+              name: "John Xanthopoulos",
+              jobTitle: "IT Executive",
+              description: seo.description,
+              url: seo.url,
+              image: seo.image,
+              email: "mailto:john@synepho.com",
+              telephone: "+1-XXX-XXX-XXXX",
+              address: {
+                "@type": "PostalAddress",
+                addressCountry: "US",
+                addressLocality: "Massachusetts",
+              },
+              sameAs: [
+                linkedinUsername
+                  ? `https://www.linkedin.com/in/${linkedinUsername}/`
+                  : null,
+                githubUsername ? `https://github.com/${githubUsername}` : null,
+                twitterUsername
+                  ? `https://twitter.com/${twitterUsername.replace("@", "")}`
+                  : null,
+              ].filter(Boolean),
+              knowsAbout: [
+                "Software Development",
+                "IT Management",
+                "AWS",
+                "Terraform",
+                "React",
+                "Cloud Architecture",
+                "JavaScript",
+                "Web Development",
+                "Technology Leadership",
+                "Digital Transformation",
+                "Team Leadership",
+                "Project Management",
+              ],
+              alumniOf: {
+                "@type": "Organization",
+                name: "University of Massachusetts",
+                sameAs: "https://www.umass.edu/",
+              },
+              worksFor: {
+                "@type": "Organization",
+                name: "Technology Company",
+              },
+              hasOccupation: {
+                "@type": "Occupation",
+                name: "IT Executive",
+                occupationLocation: {
+                  "@type": "Country",
+                  name: "United States",
+                },
+              },
             },
-          },
+            {
+              "@type": "WebSite",
+              name: "John Xanthopoulos",
+              alternateName: "Synepho",
+              url: siteUrl,
+              description: seo.description,
+              author: {
+                "@type": "Person",
+                name: "John Xanthopoulos",
+              },
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${siteUrl}/search?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            },
+          ],
         })}
       </script>
     </Helmet>

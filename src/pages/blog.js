@@ -32,31 +32,30 @@ const BlogPage = () => {
 
                 <h2 className="card-title text-2xl mb-4">
                   <Link
-                    to="/blog/lawnsmartapp-release"
+                    to="/blog/aws-services-dashboard-release"
                     className="hover:text-primary transition-colors"
                   >
-                    From Weekend Lawn Care to Zone-Intelligent App: Releasing
-                    Lawn.Smart
+                    Building AWS Services Dashboard: A Modular Architecture
+                    Journey with AI-Assisted Development
                   </Link>
                 </h2>
 
                 <p className="text-base-content/70 mb-4 leading-relaxed">
-                  How my passion for lawn care and AI-powered development led to
-                  creating a comprehensive USDA zone-customized lawn management
-                  application. From "vibe coding" with Claude to launching at
-                  lawnsmartapp.com — the story of building something genuinely
-                  useful.
+                  How strategic planning and modular serverless architecture led
+                  to a production-ready AWS monitoring platform, built entirely
+                  with Claude Code. Learn why design sessions matter more than
+                  rushing to code when working with AI assistants.
                 </p>
 
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4 text-sm text-base-content/60">
-                    <span>Published: June 7, 2025</span>
+                    <span>Published: October 24, 2025</span>
                     <span>•</span>
-                    <span>6 min read</span>
+                    <span>8 min read</span>
                   </div>
 
                   <Link
-                    to="/blog/lawnsmartapp-release"
+                    to="/blog/aws-services-dashboard-release"
                     className="btn btn-primary"
                   >
                     Read Article
@@ -84,38 +83,76 @@ const BlogPage = () => {
             <h3 className="text-2xl font-semibold text-base-content mb-6">
               Previous Posts
             </h3>
-            <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="card-body">
-                <h4 className="card-title text-xl mb-3">
-                  <Link
-                    to="/blog/ai-pair-programming-journey"
-                    className="hover:text-primary transition-colors"
-                  >
-                    From Coding Challenges to Real-World Solutions: My Journey
-                    with AI Pair Programming
-                  </Link>
-                </h4>
+            <div className="space-y-6">
+              <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="card-body">
+                  <h4 className="card-title text-xl mb-3">
+                    <Link
+                      to="/blog/lawnsmartapp-release"
+                      className="hover:text-primary transition-colors"
+                    >
+                      From Weekend Lawn Care to Zone-Intelligent App: Releasing
+                      Lawn.Smart
+                    </Link>
+                  </h4>
 
-                <p className="text-base-content/70 mb-4 leading-relaxed">
-                  Exploring how AI pair programming tools like Claude Code and
-                  GitHub Copilot have transformed my development workflow, from
-                  solving complex coding challenges to building production
-                  applications.
-                </p>
+                  <p className="text-base-content/70 mb-4 leading-relaxed">
+                    How my passion for lawn care and AI-powered development led
+                    to creating a comprehensive USDA zone-customized lawn
+                    management application. From "vibe coding" with Claude to
+                    launching at lawnsmartapp.com.
+                  </p>
 
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 text-sm text-base-content/60">
-                    <span>Published: December 16, 2024</span>
-                    <span>•</span>
-                    <span>5 min read</span>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4 text-sm text-base-content/60">
+                      <span>Published: June 7, 2025</span>
+                      <span>•</span>
+                      <span>6 min read</span>
+                    </div>
+
+                    <Link
+                      to="/blog/lawnsmartapp-release"
+                      className="btn btn-outline btn-sm"
+                    >
+                      Read Article
+                    </Link>
                   </div>
+                </div>
+              </div>
 
-                  <Link
-                    to="/blog/ai-pair-programming-journey"
-                    className="btn btn-outline btn-sm"
-                  >
-                    Read Article
-                  </Link>
+              <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="card-body">
+                  <h4 className="card-title text-xl mb-3">
+                    <Link
+                      to="/blog/ai-pair-programming-journey"
+                      className="hover:text-primary transition-colors"
+                    >
+                      From Coding Challenges to Real-World Solutions: My Journey
+                      with AI Pair Programming
+                    </Link>
+                  </h4>
+
+                  <p className="text-base-content/70 mb-4 leading-relaxed">
+                    Exploring how AI pair programming tools like Claude Code and
+                    GitHub Copilot have transformed my development workflow,
+                    from solving complex coding challenges to building
+                    production applications.
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4 text-sm text-base-content/60">
+                      <span>Published: December 16, 2024</span>
+                      <span>•</span>
+                      <span>5 min read</span>
+                    </div>
+
+                    <Link
+                      to="/blog/ai-pair-programming-journey"
+                      className="btn btn-outline btn-sm"
+                    >
+                      Read Article
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

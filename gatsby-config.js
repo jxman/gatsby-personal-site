@@ -23,7 +23,7 @@ module.exports = {
     author: "John Xanthopoulos",
     url: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
     siteUrl: process.env.GATSBY_SITE_URL || "https://www.synepho.com", // No trailing slash allowed!
-    image: "/mainImg.png", // Path to the image placed in the 'static' folder, in the project's root directory.
+    image: "/social-image.png", // Optimized social media image for Open Graph
     twitterUsername: "@jxmam",
     linkedinUsername: "johnx",
     githubUsername: "jxman",
@@ -84,12 +84,59 @@ module.exports = {
         },
       },
     },
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-sitemap",
+      options: {
+        excludes: ["/404/", "/404.html", "/dev-404-page/"],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+                pageContext
+              }
+            }
+          }
+        `,
+        serialize: ({ path }) => {
+          // Set custom priorities for different page types
+          let priority = 0.7
+          let changefreq = "monthly"
+
+          if (path === "/") {
+            priority = 1.0
+            changefreq = "weekly"
+          } else if (path.includes("/blog/")) {
+            priority = 0.8
+            changefreq = "weekly"
+          } else if (
+            ["/aboutme/", "/projects/", "/resume/", "/contact/"].includes(path)
+          ) {
+            priority = 0.9
+            changefreq = "monthly"
+          } else if (path.includes("/blog")) {
+            priority = 0.8
+            changefreq = "weekly"
+          }
+
+          return {
+            url: path,
+            changefreq,
+            priority,
+          }
+        },
+      },
+    },
     {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: process.env.GATSBY_SITE_URL || "https://www.synepho.com",
-        sitemap: `${process.env.GATSBY_SITE_URL || "https://www.synepho.com"}/sitemap/sitemap-index.xml`,
+        sitemap: `${process.env.GATSBY_SITE_URL || "https://www.synepho.com"}/sitemap-index.xml`,
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },

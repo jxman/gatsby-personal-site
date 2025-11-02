@@ -34,6 +34,9 @@ npm run deploy:full         # Complete deployment with progress messages
 npm run format              # Format code with Prettier
 npm run format:check        # Check formatting without changes
 
+# SEO Testing & Validation
+npm run build               # Test SEO optimizations in production build
+
 # Linting Commands
 # Note: No eslint configured - use IDE/editor linting or add if needed
 ```
@@ -52,45 +55,101 @@ sips -z 180 180 input.png --out output.png
 # Create favicon sizes
 sips -z 16 16 favicon-large.png --out favicon-16x16.png
 sips -z 32 32 favicon-large.png --out favicon-32.png
+
+# Create social media optimized images
+sips -s format png -Z 1200 profile-photo.jpeg --out social-image.png
 ```
+
+## SEO Optimization Features
+
+### Current SEO Implementation
+
+This site is fully optimized for search engines and social media with the following features:
+
+#### 🎯 **Advanced SEO Configuration**
+
+- **Optimized Sitemap**: Custom priority system with Homepage (1.0), Key pages (0.9), Blog (0.8)
+- **Enhanced Meta Tags**: Complete Open Graph, Twitter Cards, LinkedIn optimization
+- **Structured Data**: JSON-LD schemas for Person and WebSite entities
+- **Performance**: DNS prefetch, preconnect, and advanced robots directives
+
+#### 📱 **Social Media Optimization**
+
+- **Optimized Images**: Professional social-image.png (1200x630px) for all platforms
+- **Platform Support**: Facebook, LinkedIn, Twitter, and other social networks
+- **Rich Previews**: Enhanced sharing cards with proper meta tags
+
+#### 🔍 **Search Engine Features**
+
+- **Geographic Targeting**: Massachusetts location optimization
+- **Multi-Engine Support**: Google, Bing, and other search engines
+- **Rich Results**: Enhanced structured data for better search appearance
+- **Mobile Optimization**: Responsive and mobile-friendly implementation
+
+### SEO File Structure
+
+```
+├── SEO_OPTIMIZATION_GUIDE.md    # Complete SEO documentation
+├── static/
+│   ├── social-image.png          # Optimized social media image (1200x630)
+│   ├── favicon.svg               # Vector favicon
+│   └── robots.txt                # Generated with sitemap reference
+├── src/components/
+│   └── Seo.js                    # Enhanced SEO component
+└── gatsby-config.js              # Optimized sitemap & SEO plugins
+```
+
+### SEO Testing Commands
+
+```bash
+# Validate SEO implementation
+npm run build                     # Test all SEO features in production build
+
+# External validation tools (use after deployment):
+# - Google Rich Results Test: https://search.google.com/test/rich-results
+# - LinkedIn Post Inspector: https://www.linkedin.com/post-inspector/
+# - Facebook Sharing Debugger: https://developers.facebook.com/tools/debug/
+# - Schema.org Validator: https://validator.schema.org/
 
 ## Project Structure
 
 ```
+
 ├── src/
-│   ├── components/          # Reusable React components
-│   │   ├── Layout.js       # Main layout wrapper
-│   │   ├── Navbar.js       # Navigation with JX logo
-│   │   ├── Footer.js       # Site footer
-│   │   ├── Seo.js          # SEO meta tags
-│   │   ├── AnimatedSection.js # Intersection observer animations
-│   │   ├── ScrollToTop.js  # Scroll to top button
-│   │   └── ClientOnly.js   # SSR-safe client rendering
-│   ├── pages/              # Gatsby pages (auto-routing)
-│   │   ├── index.js        # Homepage
-│   │   ├── aboutme.js      # About page
-│   │   ├── projects.js     # Projects showcase
-│   │   ├── awshealth.js    # AWS Health project detail
-│   │   ├── awssite.js      # AWS Multi-region site detail
-│   │   ├── awsrss.js       # AWS RSS checker detail
-│   │   ├── resume.js       # Resume page
-│   │   ├── contact.js      # Contact form
-│   │   ├── lawn.js         # Lawn project showcase
-│   │   └── blog/           # Blog posts
-│   ├── content/            # JSON data
-│   │   └── projects.json   # Projects configuration
-│   ├── markdown-pages/     # Markdown content
-│   │   ├── about.md
-│   │   └── resume.md
-│   ├── images/             # Source images (Gatsby processed)
-│   └── styles/             # Global CSS
-├── static/                 # Static assets (copied to public)
-│   ├── favicon.svg         # Vector favicon with JX logo
-│   ├── favicon-16x16.png   # PNG favicon
-│   ├── apple-touch-icon.png # iOS icon
-│   ├── favicon.ico         # Legacy favicon
-│   └── manifest.json       # PWA manifest
-```
+│ ├── components/ # Reusable React components
+│ │ ├── Layout.js # Main layout wrapper
+│ │ ├── Navbar.js # Navigation with JX logo
+│ │ ├── Footer.js # Site footer
+│ │ ├── Seo.js # SEO meta tags
+│ │ ├── AnimatedSection.js # Intersection observer animations
+│ │ ├── ScrollToTop.js # Scroll to top button
+│ │ └── ClientOnly.js # SSR-safe client rendering
+│ ├── pages/ # Gatsby pages (auto-routing)
+│ │ ├── index.js # Homepage
+│ │ ├── aboutme.js # About page
+│ │ ├── projects.js # Projects showcase
+│ │ ├── awshealth.js # AWS Health project detail
+│ │ ├── awssite.js # AWS Multi-region site detail
+│ │ ├── awsrss.js # AWS RSS checker detail
+│ │ ├── resume.js # Resume page
+│ │ ├── contact.js # Contact form
+│ │ ├── lawn.js # Lawn project showcase
+│ │ └── blog/ # Blog posts
+│ ├── content/ # JSON data
+│ │ └── projects.json # Projects configuration
+│ ├── markdown-pages/ # Markdown content
+│ │ ├── about.md
+│ │ └── resume.md
+│ ├── images/ # Source images (Gatsby processed)
+│ └── styles/ # Global CSS
+├── static/ # Static assets (copied to public)
+│ ├── favicon.svg # Vector favicon with JX logo
+│ ├── favicon-16x16.png # PNG favicon
+│ ├── apple-touch-icon.png # iOS icon
+│ ├── favicon.ico # Legacy favicon
+│ └── manifest.json # PWA manifest
+
+````
 
 ## Dependencies & Technologies
 
@@ -151,7 +210,7 @@ GATSBY_ENABLE_ANALYTICS=true
 AWS_REGION=us-east-1
 AWS_S3_BUCKET=www.synepho.com
 CLOUDFRONT_DISTRIBUTION_ID=E2UW9JLSX34HRT
-```
+````
 
 ### Configuration Files
 
