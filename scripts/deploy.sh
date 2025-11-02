@@ -192,25 +192,17 @@ deploy_to_s3() {
         exit 1
     fi
 
-    print_info "Syncing non-HTML files with 1-year cache..."
+    # This matches the working deploy:prod command from package.json
+    print_info "Syncing static assets with 1-year cache (excludes HTML)..."
     aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
         --delete \
-        --cache-control "max-age=31536000,public" \
-        --exclude "*.html" \
-        --exclude "page-data/*" \
-        --exclude "static/*"
+        --cache-control "max-age=31536000" \
+        --exclude="*.html"
 
     print_info "Syncing HTML files with no cache..."
     aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
-        --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
-        --exclude "*" \
-        --include "*.html"
-
-    print_info "Syncing page-data with short cache..."
-    aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
-        --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
-        --exclude "*" \
-        --include "page-data/*"
+        --cache-control "max-age=0" \
+        --include="*.html"
 
     print_success "S3 sync completed"
 }
