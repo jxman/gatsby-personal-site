@@ -149,21 +149,24 @@ A modern, responsive personal portfolio website built with Gatsby and deployed t
 
 ### Available Scripts
 
-| Script                     | Purpose                                    |
-| -------------------------- | ------------------------------------------ |
-| `npm run dev`              | Start development server (alias)           |
-| `npm run develop`          | Start development server                   |
-| `npm run build`            | Build for production                       |
-| `npm run serve`            | Preview production build                   |
-| `npm run clean`            | Clean Gatsby cache                         |
-| `npm run format`           | Format code with Prettier                  |
-| `npm run format:check`     | Check code formatting without changes      |
-| `npm run deploy:prod`      | Deploy to S3 with optimized cache headers  |
-| `npm run deploy:simple`    | Simple S3 sync without cache optimization  |
-| `npm run build-and-deploy` | Build and deploy to S3 (production)        |
-| `npm run package`          | Build and create deployment zip file       |
-| `npm run invalidate`       | Invalidate CloudFront cache                |
-| `npm run deploy:full`      | Complete deployment with progress feedback |
+| Script                     | Purpose                                              |
+| -------------------------- | ---------------------------------------------------- |
+| `npm run dev`              | Start development server (alias)                     |
+| `npm run develop`          | Start development server                             |
+| `npm run build`            | Build for production                                 |
+| `npm run serve`            | Preview production build                             |
+| `npm run clean`            | Clean Gatsby cache                                   |
+| `npm run format`           | Format code with Prettier                            |
+| `npm run format:check`     | Check code formatting without changes                |
+| `npm run deploy`           | 🚀 **Smart deployment** (checks, builds, validates)  |
+| `npm run deploy:check`     | Preview deployment changes (dry run)                 |
+| `npm run deploy:quick`     | Deploy without validation checks                     |
+| `npm run deploy:prod`      | Deploy to S3 with optimized cache headers            |
+| `npm run deploy:simple`    | Simple S3 sync without cache optimization            |
+| `npm run build-and-deploy` | Build and deploy to S3 (production)                  |
+| `npm run package`          | Build and create deployment zip file                 |
+| `npm run invalidate`       | Invalidate CloudFront cache                          |
+| `npm run deploy:full`      | Complete deployment with progress feedback (legacy)  |
 
 ## 🌩 AWS Deployment
 
@@ -177,9 +180,53 @@ Users → CloudFront CDN → S3 Static Website Hosting
                     AWS CLI Direct Upload
 ```
 
-### Deployment Method
+### Deployment Methods
 
-**Secure AWS CLI Deployment:**
+#### 🚀 Smart Deployment Script (Recommended)
+
+The intelligent deployment script provides comprehensive validation and deployment with safety checks:
+
+```bash
+# Standard deployment (recommended)
+npm run deploy
+
+# Preview changes without deploying
+npm run deploy:check
+
+# Quick deployment (skip validation)
+npm run deploy:quick
+```
+
+**Features:**
+
+- ✅ **Pre-deployment validation** - AWS credentials, git status, S3 bucket checks
+- ✅ **Change preview** - Shows exactly what will be added/updated/deleted
+- ✅ **Interactive confirmation** - Prevents accidental deployments
+- ✅ **Optimized caching** - Different strategies for HTML vs static assets
+- ✅ **CloudFront invalidation** - Automatic cache clearing
+- ✅ **Post-deployment verification** - Confirms site accessibility
+- ✅ **Colored output** - Easy-to-read status messages
+- ✅ **Dry-run mode** - Test without deploying
+
+**Example Output:**
+
+```
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🚀 Gatsby Site Deployment
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ AWS credentials valid
+✅ Working directory clean
+ℹ Files to add: 3
+ℹ Files to update: 12
+ℹ Files to delete: 0
+
+Proceed with deployment to https://synepho.com? (y/N):
+```
+
+**See `scripts/README.md` for complete documentation.**
+
+#### Legacy Deployment Commands
 
 ```bash
 # Quick deployment
@@ -189,13 +236,7 @@ npm run build-and-deploy
 npm run deploy:full
 ```
 
-The enhanced `deploy:full` command provides:
-
-- ✅ **Progress messages** - Clear start and completion feedback
-- ✅ **Complete pipeline** - Build → Deploy → Cache invalidation
-- ✅ **Error handling** - Sequential execution with proper error stopping
-
-This approach:
+**Benefits of Direct AWS CLI Deployment:**
 
 - ✅ Uses direct AWS API calls
 - ✅ Eliminates vulnerable plugin dependencies
