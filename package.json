@@ -64,7 +64,8 @@
   "overrides": {
     "cookie": "^0.7.0",
     "tmp": "^0.2.4",
-    "serialize-javascript": "^6.0.2"
+    "serialize-javascript": "^6.0.2",
+    "glob": "^10.4.5"
   },
   "repository": {
     "type": "git",
