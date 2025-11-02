@@ -5,6 +5,13 @@
 
 set -e  # Exit on error
 
+# Get the directory where the script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+# Change to project root
+cd "${PROJECT_ROOT}"
+
 # Color codes for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -16,6 +23,7 @@ NC='\033[0m' # No Color
 S3_BUCKET="www.synepho.com"
 CLOUDFRONT_DISTRIBUTION_ID="${CLOUDFRONT_DISTRIBUTION_ID:-E2UW9JLSX34HRT}"
 SITE_URL="https://synepho.com"
+PUBLIC_DIR="${PROJECT_ROOT}/public"
 
 # Function to print colored messages
 print_info() {
@@ -101,7 +109,7 @@ validate_s3_bucket() {
 preview_changes() {
     print_header "Analyzing Changes"
 
-    if [[ ! -d "public" ]]; then
+    if [[ ! -d "${PUBLIC_DIR}" ]]; then
         print_warning "No existing build found - full deployment required"
         return
     fi
@@ -113,9 +121,9 @@ preview_changes() {
     local temp_s3=$(mktemp)
 
     # Get local files
-    cd public
+    cd "${PUBLIC_DIR}"
     find . -type f | sed 's|^\./||' | sort > "$temp_local"
-    cd ..
+    cd "${PROJECT_ROOT}"
 
     # Get S3 files
     aws s3 ls "s3://${S3_BUCKET}" --recursive | awk '{print $4}' | sort > "$temp_s3"
@@ -161,9 +169,9 @@ build_site() {
         print_success "Build completed successfully"
 
         # Show build statistics
-        if [[ -d "public" ]]; then
-            local total_files=$(find public -type f | wc -l | tr -d ' ')
-            local total_size=$(du -sh public | cut -f1)
+        if [[ -d "${PUBLIC_DIR}" ]]; then
+            local total_files=$(find "${PUBLIC_DIR}" -type f | wc -l | tr -d ' ')
+            local total_size=$(du -sh "${PUBLIC_DIR}" | cut -f1)
             print_info "Total files: ${total_files}"
             print_info "Total size: ${total_size}"
         fi
@@ -177,8 +185,15 @@ build_site() {
 deploy_to_s3() {
     print_header "Deploying to S3"
 
+    # Verify public directory exists
+    if [[ ! -d "${PUBLIC_DIR}" ]]; then
+        print_error "Build directory not found: ${PUBLIC_DIR}"
+        print_info "Run 'npm run build' first or remove --skip-build flag"
+        exit 1
+    fi
+
     print_info "Syncing non-HTML files with 1-year cache..."
-    aws s3 sync ./public/ "s3://${S3_BUCKET}" \
+    aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
         --delete \
         --cache-control "max-age=31536000,public" \
         --exclude "*.html" \
@@ -186,13 +201,13 @@ deploy_to_s3() {
         --exclude "static/*"
 
     print_info "Syncing HTML files with no cache..."
-    aws s3 sync ./public/ "s3://${S3_BUCKET}" \
+    aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
         --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
         --exclude "*" \
         --include "*.html"
 
     print_info "Syncing page-data with short cache..."
-    aws s3 sync ./public/ "s3://${S3_BUCKET}" \
+    aws s3 sync "${PUBLIC_DIR}/" "s3://${S3_BUCKET}" \
         --cache-control "max-age=0,no-cache,no-store,must-revalidate" \
         --exclude "*" \
         --include "page-data/*"
